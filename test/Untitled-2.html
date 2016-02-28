@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<div id="div" style=" width:100px; height:100px; background-color:#FC0; position:absolute; left:100px; top:100px;"></div>
+<script>
+var div = document.getElementById("div");
+var height = parseInt(div.style.height);
+//定时器
+var timer;
+//垂直移动的标识  0表示向下移动  1表示向上移动
+var hFlag = 0 
+function move(){
+	var top = parseInt(div.style.top); 
+	//根据垂直移动的标识判断层的边距改变方式
+	if(hFlag == 0){
+		//增加层的上边距
+		div.style.top = top+1;
+	}
+	else{
+		//减少层的下边距
+		div.style.top = top-1;
+	}
+	//重新获取上边距
+	top = parseInt(div.style.top); 
+	//判断层是否移动到屏幕的下边边缘
+	if(top >= document.documentElement.clientHeight-height){
+		//修改标识向下移动
+		hFlag = 1;
+	}
+	//如果层到达浏览器的上边缘时
+	if(top == 0){
+		//向下移动
+		hFlag = 0;	
+	}
+	timer = window.setTimeout("move()",1);
+}
+move();
+//窗体大小改变事件
+window.onresize = function(){
+	//获取层的上边距
+	var top = parseInt(div.style.top);
+	//判断层是否移动到屏幕的右边边缘
+	if(top > document.documentElement.clientHeight-height){
+		//将层调整至屏幕的右边缘
+		div.style.top = document.documentElement.clientHeight-height;
+	}
+}
+</script>
+</body>
+</html>

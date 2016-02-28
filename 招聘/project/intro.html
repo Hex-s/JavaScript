@@ -1,0 +1,722 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>简历管理</title>
+</head>
+<link href="css.css" type="text/css" rel="stylesheet" />
+<body class="intro_body">
+<!--总体-->
+<div style="width:965px;margin:0px auto;"> 
+  <!--前程无忧图片-start-->
+  <div style=" width:143px; height:60px; float:left; margin-left:15px;"><img src="image/logo.gif" /></div>
+  <!--前程无忧图片-end--> 
+  <!--My51job……-start-->
+  <div id="index_menu" style="width:300px; height:31px;">
+    <div><a href="login.html" style="background-image:url(image/menu1-2.gif); display:block; height:31px; width:96px;"></a></div>
+    <div><a href="search.html" style="background-image:url(image/menu2-2.gif); display:block; height:31px; width:96px;"></a></div>
+    <div><a href="intro.html" style="background-image:url(image/menu3-1.gif); display:block; height:31px; width:96px;"></a></div>
+  </div>
+  <!--My51job……-end--> 
+  <!--位置栏……-start-->
+  <div class="menu">简历中心 | 求职信 | 简历指导 </div>
+  <!--位置栏……-end--> 
+  <!--主题部分 -start-->
+  <div style="width:965px; margin-top:5px;" id="intro_mainbody"> 
+    <!--左边 start-->
+    <div style="width:20%; float:left; height:100px; margin-left:25px; background-color:#FFFFF7;"> 
+      <!--简历名称 -start-->
+      <div id="intro_nametitle" style="background-image:url(image/intro-left1.gif); width:189px; height:32px; margin-top:5px; cursor:hand;"></div>
+      <div id="intro_name" style="height:25px;" class="intro_info" style="display:none">
+      <img src="image/register-arrow.gif" /><span class="intro_title">&nbsp;&nbsp;我的简历</span></div>
+    <!--简历名称 -end--> 
+    <!--基本信息 -start-->
+    <div id="intro_infotitle" style="background-image:url(image/intro-left2.gif); width:189px; height:32px; margin-top:5px;"></div>
+    <div id="intro_info" style="display:none;">
+      <div class="intro_info"><img src="image/intro-1.gif" />&nbsp;&nbsp;<a href="#basicInfo">基本个人信息</a></div>
+      <div class="intro_info"><img src="image/intro-1.gif" />&nbsp;&nbsp;<a href="#exp">工作经验</a></div>
+      <div class="intro_info"><img src="image/intro-1.gif" />&nbsp;&nbsp;<a href="#exp">教育经历</a></div>
+      <div class="intro_info"><img src="image/intro-1.gif" />&nbsp;&nbsp;<a href="#exp">培训经历</a></div>
+      <div class="intro_info"><img src="image/intro-1.gif" />&nbsp;&nbsp;语言能力</div>
+      <div class="intro_info"><img src="image/intro-1.gif" />&nbsp;&nbsp;<a href="#exp">求职意向/自我评价</a></div>
+      <div class="intro_info"><img src="image/intro-1.gif" />&nbsp;&nbsp;附加信息</div>
+      <div class="intro_info"><img src="image/intro-1.gif" />&nbsp;&nbsp;证书</div>
+      <div class="intro_info"><img src="image/intro-1.gif" />&nbsp;&nbsp;附件</div>
+    </div>
+    <!--基本信息 -end--> 
+    <!--人才附加信息 -start-->
+    <div id="intro_appandtitle" style="background-image:url(image/intro-left3.gif); width:189px; height:32px; margin-top:10px;"></div>
+    <div id="intro_appand" style="display:none">
+      <div class="intro_info"><img src="image/intro-1.gif" />&nbsp;&nbsp;<a href="#app">高级人才附加信息</a></div>
+      <div class="intro_info"><img src="image/intro-1.gif" />&nbsp;&nbsp;<a href="#app">IT技能</a></div>
+      <div class="intro_info"><img src="image/intro-1.gif" />&nbsp;&nbsp;<a href="#app">项目经验</a></div>
+    </div>
+    <!--人才附加信息 -end--> 
+  </div>
+  <!--左边 end--> 
+  <!--右边 start-->
+  <div style="width:68%;float:left;height:100px;margin-left:25px;">
+    <form action="#" method="post" onsubmit="return validate()">
+      <!--基本个人信息-title -start-->
+      <div id="intro_name" style="height:25px;" class="intro_info"><img src="image/register-arrow.gif" name="basicInfo"/><span class="intro_title">&nbsp;&nbsp;基本个人信息 (*为必填项)</span></div>
+      <!--基本个人信息-title -start--> 
+      <!--基本个人信息-横线 -start-->
+      <div>
+        <div style="border-bottom:1px solid #dddddd"></div>
+        <div style="border-bottom:1px solid #eeeeee"></div>
+        <div style="border-bottom:1px solid #f7f7f7"></div>
+        <div style="border-bottom:1px solid #ffffff"></div>
+      </div>
+      <!--基本个人信息-横线 -end--> 
+      <!--基本个人信息表格-title -start-->
+      <div style="height:270px;margin-top:20px;">
+        <table width="643" height="270">
+          <tr>
+            <td width="79"><span class="yellow">*</span>&nbsp;&nbsp;姓名</td>
+            <td width="272"><input id="username" type="text" class="intro_input" onblur="validate_name()"/>
+              <div class="intro_error" id="nameError"></div></td>
+            <td width="66"><span class="yellow">*</span>&nbsp;&nbsp;性别</td>
+            <td width="206"><input name="intro_sex" type="radio" value="男" checked="checked" >
+              男&nbsp;
+              <input name="intro_sex" type="radio" value="女">
+              女</td>
+          </tr>
+          <tr>
+            <td><span class="yellow">*</span>&nbsp;&nbsp;出生日期</td>
+            <td>
+            <select id="birthyear" onchange="chengeDay()">
+                <option value=1997 selected>1997</option>
+                <option value=1996>1996</option>
+                <option value=1995>1995</option>
+                <option value=1994>1994</option>
+                <option value=1993>1993</option>
+                <option value=1992>1992</option>
+                <option value=1991>1991</option>
+                <option value=1990>1990</option>
+                <option value=1989>1989</option>
+                <option value=1988>1988</option>
+                <option value=1987>1987</option>
+                <option value=1986>1986</option>
+                <option value=1985>1985</option>
+                <option value=1984>1984</option>
+                <option value=1983>1983</option>
+                <option value=1982>1982</option>
+                <option value=1981>1981</option>
+                <option value=1980>1980</option>
+                <option value=1979>1979</option>
+                <option value=1978>1978</option>
+                <option value=1977>1977</option>
+                <option value=1976>1976</option>
+                <option value=1975>1975</option>
+                <option value=1974>1974</option>
+                <option value=1973>1973</option>
+                <option value=1972>1972</option>
+                <option value=1971>1971</option>
+                <option value=1970>1970</option>
+                <option value=1969>1969</option>
+                <option value=1968>1968</option>
+                <option value=1967>1967</option>
+                <option value=1966>1966</option>
+                <option value=1965>1965</option>
+                <option value=1964>1964</option>
+                <option value=1963>1963</option>
+                <option value=1962>1962</option>
+                <option value=1961>1961</option>
+                <option value=1960>1960</option>
+                <option value=1959>1959</option>
+                <option value=1958>1958</option>
+                <option value=1957>1957</option>
+                <option value=1956>1956</option>
+                <option value=1955>1955</option>
+                <option value=1954>1954</option>
+                <option value=1953>1953</option>
+                <option value=1952>1952</option>
+                <option value=1951>1951</option>
+                <option value=1950>1950</option>
+                <option value=1949>1949</option>
+                <option value=1948>1948</option>
+                <option value=1947>1947</option>
+                <option value=1946>1946</option>
+                <option value=1945>1945</option>
+                <option value=1944>1944</option>
+                <option value=1943>1943</option>
+                <option value=1942>1942</option>
+                <option value=1941>1941</option>
+                <option value=1940>1940</option>
+                <option value=1939>1939</option>
+                <option value=1938>1938</option>
+                <option value=1937>1937</option>
+              </select>
+              年
+              <select id="birthmonth" onchange="chengeDay()">
+                <option value=1 selected>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+                <option value=6>6</option>
+                <option value=7>7</option>
+                <option value=8>8</option>
+                <option value=9>9</option>
+                <option value=10>10</option>
+                <option value=11>11</option>
+                <option value=12>12</option>
+              </select>
+              月
+              <select  id="birthday">
+                <option value=1 selected>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option  value=4>4</option>
+                <option value=5>5</option>
+                <option value=6>6</option>
+                <option value=7>7</option>
+                <option value=8>8</option>
+                <option value=9>9</option>
+                <option value=10>10</option>
+                <option value=11>11</option>
+                <option value=12>12</option>
+                <option value=13>13</option>
+                <option value=14>14</option>
+                <option value=15>15</option>
+                <option value=16>16</option>
+                <option value=17>17</option>
+                <option value=18>18</option>
+                <option value=19>19</option>
+                <option value=20>20</option>
+                <option value=21>21</option>
+                <option value=22>22</option>
+                <option value=23>23</option>
+                <option value=24>24</option>
+                <option value=25>25</option>
+                <option value=26>26</option>
+                <option value=27>27</option>
+                <option value=28>28</option>
+                <option value=29>29</option>
+                <option value=30>30</option>
+                <option value=31>31</option>
+              </select>
+              日 </td>
+            <td><span class="yellow">*</span>&nbsp;&nbsp;工作年限</td>
+            <td><select style="width: 110px" id="workyear" onblur="validate_workyear()">
+                <option 
+              value="0" selected>--请选择--</option>
+                <option 
+              value="在读学生">在读学生</option>
+                <option value="应届毕业生">应届毕业生</option>
+                <option 
+              value="一年以上">一年以上</option>
+                <option value="二年以上">二年以上</option>
+                <option 
+              value="三年以上">三年以上</option>
+                <option value="寺年以上">五年以上</option>
+                <option 
+              value="八年以上">八年以上</option>
+                <option value="十年以上">十年以上</option>
+              </select>
+              <div class="intro_error" id="workyearError"></div></td>
+          </tr>
+          <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;国家或地区</td>
+            <td><select style="width: 130px"  id="nation">
+                <option 
+              value="中国大陆" selected>中国大陆</option>
+                <option 
+              value="中国香港">中国香港</option>
+                <option value="中国澳门">中国澳门</option>
+                <option 
+              value="中国台湾">中国台湾</option>
+                <option value="非洲">非洲</option>
+                <option 
+              value="加拿大">加拿大</option>
+                <option value="欧洲">欧洲</option>
+                <option 
+              value="法国">法国</option>
+                <option value="德国">德国</option>
+                <option 
+              value="日本">日本</option>
+                <option value="韩国">韩国</option>
+                <option 
+              value="北美">北美</option>
+                <option value="新加坡">新加坡</option>
+                <option 
+              value="东南亚">东南亚</option>
+                <option value="南美">南美</option>
+                <option 
+              value="英国">英国</option>
+                <option value="美国">美国</option>
+                <option 
+              value="西亚">西亚</option>
+                <option value="其他">其他</option>
+              </select></td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;户&nbsp;&nbsp;口</td>
+            <td><select style="width: 110px" id=hukou>
+                <option 
+              value=00 selected>请选择</option>
+                <option value="北京">北京</option>
+                <option 
+              value="上海">上海</option>
+                <option value="天津">天津</option>
+                <option 
+              value="重庆">重庆</option>
+                <option value="江苏">江苏</option>
+                <option 
+              value="浙江">浙江</option>
+                <option value="广东">广东</option>
+                <option 
+              value="海南">海南</option>
+                <option value="福建">福建</option>
+                <option 
+              value="山东">山东</option>
+                <option value="江西">江西</option>
+                <option 
+              value="四川">四川</option>
+                <option value="安徽">安徽</option>
+                <option 
+              value="河北">河北</option>
+                <option value="河南">河南</option>
+                <option 
+              value="湖北">湖北</option>
+                <option value="湖南">湖南</option>
+                <option 
+              value="陕西">陕西</option>
+                <option value="山西">山西</option>
+                <option 
+              value="黑龙江">黑龙江</option>
+                <option value="辽宁">辽宁</option>
+                <option 
+              value="吉林">吉林</option>
+                <option value="广西">广西</option>
+                <option 
+              value="云南">云南</option>
+                <option value="贵州">贵州</option>
+                <option 
+              value="甘肃">甘肃</option>
+                <option value="内蒙">内蒙</option>
+                <option 
+              value="宁夏">宁夏</option>
+                <option value="西藏">西藏</option>
+                <option 
+              value="新疆">新疆</option>
+                <option value="青海">青海</option>
+                <option 
+              value="香港">香港</option>
+                <option value="澳门">澳门</option>
+                <option 
+              value="台湾">台湾</option>
+                <option value="国外">国外</option>
+              </select></td>
+          </tr>
+          <tr>
+            <td><span class="yellow">*</span>&nbsp;&nbsp;证件类型</td>
+            <td><select style="width: 130px" id="cardtype">
+                <option 
+              value="身份证" selected>身份证</option>
+                <option value="护照">护照</option>
+                <option value="军人证">军人证</option>
+                <option value="香港身份证">香港身份证</option>
+                <option value="其它">其它</option>
+              </select></td>
+            <td><span class="yellow">*</span>&nbsp;&nbsp;证&nbsp;件&nbsp;号</td>
+            <td><input id="cardnumber" type="text" class="intro_input" onblur="validate_cardnumber()"/>
+              <div class="intro_error" id="cardnumberError"></div></td>
+          </tr>
+          <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;目前年薪</td>
+            <td><select style="width: 130px" id="salary">
+                <option value=0 selected>--请输入--</option>
+                <option 
+              value="2万以下">2万以下</option>
+                <option value="2-3万">2-3万</option>
+                <option 
+              value="3-4万">3-4万</option>
+                <option value="4-5万">4-5万</option>
+                <option 
+              value="5-6万">5-6万</option>
+                <option value="6-7万">6-8万</option>
+                <option 
+              value="8-10万">8-10万</option>
+                <option value="10-15万">10-15万</option>
+                <option 
+              value="15-30万">15-30万</option>
+                <option value="30-50万">30-50万</option>
+                <option 
+              value="50-100万">50-100万</option>
+                <option 
+          value="100万以上">100万以上</option>
+              </select>
+              / 年</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;币&nbsp;&nbsp;种</td>
+            <td><select style="width: 80px" id="currtype">
+                <option 
+              value="人民币" selected>人民币</option>
+                <option value="港币">港币</option>
+                <option 
+              value="美元">美元</option>
+                <option value="日元">日元</option>
+                <option 
+              value="欧元">欧元</option>
+                <option value="其它">其它</option>
+              </select></td>
+          </tr>
+          <tr>
+            <td><span class="yellow">*</span>&nbsp;&nbsp;现居住地</td>
+            <td colspan="3"><select id="privince" style="width: 130px" onblur="validate_nowLoc()" onchange="cityChange()">
+                <option value="-1">--选择省份--</option>
+                <option value="0">北京市</option>
+                <option value="1">上海市</option>
+                <option value="2">广州省</option>
+                <option value="3">深圳市</option>
+                <option value="4">重庆市</option>
+                <option value="5">天津市</option>
+                <option value="6">江苏省</option>
+                <option value="7">浙江省</option>
+                <option value="8">四川省</option>
+                <option value="9">海南省</option>
+                <option value="10">福建省</option>
+                <option value="11">山东省</option>
+                <option value="12">江西省</option>
+                <option value="13">广西</option>
+                <option value="14">安徽省</option>
+                <option value="15">河北省</option>
+                <option value="16">河南省</option>
+                <option value="17">湖北省</option>
+                <option value="18">湖南省</option>
+                <option value="19">陕西省</option>
+                <option value="20">山西省</option>
+                <option value="21">黑龙江省</option>
+                <option value="22">国外</option>
+                <option value="23">其他</option>
+              </select>
+              <select id="city" style="width: 130px">
+                <option>--选择城市--</option>
+              </select>
+              <div class="intro_error" id="nowlocError"></div></td>
+          </tr>
+          <tr>
+            <td><span class="yellow">*</span>&nbsp;&nbsp;联系方式</td>
+            <td><input style="width: 160px"  id="tel" class="intro_input" onblur="validate_tel()"/>
+              <div class="intro_error" id="telError"></div></td>
+            <td><span class="yellow">*</span>&nbsp;&nbsp;e-mail</td>
+            <td><input id="email" type="text" class="intro_input" onblur="validate_email()">
+              <div class="intro_error" id="emailError"></div></td>
+          </tr>
+          <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;地址</td>
+            <td><input id="address" type="text" size="35" class="intro_input"></td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;邮编</td>
+            <td><input id="zipcode" type="text" size="5" class="intro_input"></td>
+          </tr>
+          <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;个人主页</td>
+            <td colspan="3"><input id="homepage" type="text" size="35" class="intro_input">
+          </tr>
+        </table>
+      </div>
+      <!--基本个人信息-表格 -start--> 
+      <!--我的简历 -start-->
+      <div>
+        <div id="intro_name" style="height:25px;" class="intro_info"><img src="image/register-arrow.gif" name="exp" /><span class="intro_title">&nbsp;&nbsp;我的简历</span></div>
+        <div>
+          <div style="border-bottom:1px solid #dddddd"></div>
+          <div style="border-bottom:1px solid #eeeeee"></div>
+          <div style="border-bottom:1px solid #f7f7f7"></div>
+          <div style="border-bottom:1px solid #ffffff"></div>
+        </div>
+        <div style="margin-top:10px;">
+          <table height="250">
+            <tr>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp;工作经验</td>
+              <td><textarea id="workExpInfo" cols="60" rows="3"></textarea></td>
+            </tr>
+            <tr>
+              <td><span class="yellow">*</span>&nbsp;&nbsp;教育经历</td>
+              <td><textarea id="edu" cols="60" rows="3" onblur="validate_edu()"></textarea>
+                <div class="intro_error" id="eduError"></div></td>
+            </tr>
+            <tr>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp;培训经历</td>
+              <td><textarea id="train" cols="60" rows="3"></textarea></td>
+            </tr>
+            <tr>
+              <td><span class="yellow">*</span>&nbsp;&nbsp;求职意向</td>
+              <td><textarea id="jobdesier" cols="60" rows="3" onblur="validate_jobdesier()"></textarea>
+                <div class="intro_error" id="jobdesierError"></div></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <!--我的简历 -end--> 
+      <!--人才附加信息 -start-->
+      <div>
+        <div id="intro_name" style="height:25px;" class="intro_info"><img src="image/register-arrow.gif" name="app"/><span class="intro_title">&nbsp;&nbsp;人才附加信息</span></div>
+        <div>
+          <div style="border-bottom:1px solid #dddddd"></div>
+          <div style="border-bottom:1px solid #eeeeee"></div>
+          <div style="border-bottom:1px solid #f7f7f7"></div>
+          <div style="border-bottom:1px solid #ffffff"></div>
+        </div>
+        <div style="margin-top:5px;">
+          <table height="190">
+            <tr>
+              <td>&nbsp;&nbsp;附加信息</td>
+              <td><textarea id="otheredit" cols="60" rows="3"></textarea></td>
+            </tr>
+            <tr>
+              <td>&nbsp;&nbsp;IT技能</td>
+              <td><textarea id="itedit" cols="60" rows="3"></textarea></td>
+            </tr>
+            <tr>
+              <td>&nbsp;&nbsp;项目经验</td>
+              <td><textarea name="project" cols="60" rows="3"></textarea></td>
+            </tr>
+          </table>
+        </div>
+        <div>
+          <hr size="2" color="#ff7000" width="96%" align="center">
+        </div>
+        <div>
+          <input type="button" value="保存" style="background-image:url(image/login-sm2.gif); width:100px; height:33px; line-height:33px; text-align:center; border:0px; margin-left:280px; background-color:#FFF;" id="intro_subBtn" onclick="validate_btn()" />
+        </div>
+      </div>
+      <!--人才附加信息 -end-->
+    </form>
+  </div>
+  <!--右边 end--> 
+</div>
+<!--主题部分 -end--> 
+<!--尾部导航 -start-->
+<div class="menu" id="bg_menu"> 网站导航 | <a href="index.html">网站首页</a> | <a href="search.html">职位搜索</a> | <a href="login.html">Myjob</a> | <a href="register.html">用户注册</a> | <a href="login.html">用户登录</a> | <a href="intro.html">简历管理</a> | <a href="company.html" >招聘公司</a> </div>
+<!--尾部导航 -end--> 
+<!--尾部信息 -start-->
+<div style="text-align:center; color:#333; width:965px; height:150px; line-height:25px; letter-spacing:1px;"> 人才招聘 Email:hr@51job.com<br />
+  个人求职 Email:club@51job.com　或垂询:800-820-5100<br />
+  未经本招聘网站同意，不得转载本网站之所有招聘信息及作品<br />
+  无忧工作网版权所有©1999-2007<br />
+  <a href="http://www.miibeian.gov.cn" target="_blank"><img src="image/bottom1.gif" border="0"/></a> </div>
+<!--尾部信息 -end-->
+</div>
+<!--总体结束-->
+
+</body>
+<script src="javascrip.js"></script>
+<script>
+ var myJob = document.getElementById("myJob");
+ var jobSearch = document.getElementById("jobSearch");
+ var resumeMag = document.getElementById("resumeMag");
+ var intro_nametitle = document.getElementById("intro_nametitle");
+ var intro_name = document.getElementById("intro_name");
+ var intro_infotitle = document.getElementById("intro_infotitle");
+ var intro_info = document.getElementById("intro_info");
+ var intro_appandtitle = document.getElementById("intro_appandtitle");
+ var intro_appand = document.getElementById("intro_appand");
+ 
+ intro_nametitle.onclick = function(){
+	intro_name.style.display = "block";	
+	intro_info.style.display = "none"; 
+	intro_appand.style.display = "none"; 
+ }
+ intro_infotitle.onclick = function(){
+	intro_name.style.display = "none";	
+	intro_info.style.display = "block"; 
+	intro_appand.style.display = "none"; 
+ }
+ intro_appandtitle.onclick = function(){
+	intro_name.style.display = "none";	
+	intro_info.style.display = "none"; 
+	intro_appand.style.display = "block"; 
+ }
+ 
+ var username = document.getElementById("username");
+ var nameError = document.getElementById("nameError");
+ var workyear = document.getElementById("workyear");
+ var workyearError = document.getElementById("workyearError");
+ var cardnumber = document.getElementById("cardnumber");
+ var cardnumberError = document.getElementById("cardnumberError");
+ var privince = document.getElementById("privince");
+ var city = document.getElementById("city");
+ var nowlocError = document.getElementById("nowlocError");
+ var tel = document.getElementById("tel");
+ var telError = document.getElementById("telError");
+ var email = document.getElementById("email");
+ var emailError = document.getElementById("emailError");
+ var edu = document.getElementById("edu");
+ var eduError = document.getElementById("eduError");
+ var jobdesier = document.getElementById("jobdesier");
+ var jobdesierError = document.getElementById("jobdesierError");
+ var flag = 1;
+ //验证姓名
+ function validate_name(){
+	if(username.value == ""){
+		flag = 0;
+		nameError.innerHTML = "请填写姓名";	
+	}	 
+	else{
+		flag = 1;
+		nameError.innerHTML = "";	
+	}
+ }
+ //验证工作年限
+ function validate_workyear(){
+	if(workyear.selectedIndex == 0){
+		flag = 0;
+		workyearError.innerHTML = "请选择工作年限";
+	}
+	else{
+		flag = 1;
+		workyearError.innerHTML = "";	
+	} 
+ }
+ //验证证件号
+ function validate_cardnumber(){
+	var rule = /^\d{14,17}[\d,x,X]$/;
+	if(cardnumber.value == ""){
+		flag = 0;
+		cardnumberError.innerHTML = "请填写证件号";	
+	}
+	else if(!rule.test(cardnumber.value)){
+		flag = 0;
+		cardnumberError.innerHTML = "请填写正确证件号";	
+	}	 
+	else{
+		flag = 1;
+		cardnumberError.innerHTML = "";	
+	}	 
+ }
+ //验证现居住地
+function validate_nowLoc(){
+	if(privince.selectedIndex == 0)	{
+		flag = 0;
+		nowlocError.innerHTML = "请选择现居住地";	
+	}
+	else{
+		flag = 1;
+		nowlocError.innerHTML = "";	
+	}
+}
+//验证联系方式 
+function validate_tel(){
+	var rule = /^[\d]{11}$/;
+	if(tel.value == ""){
+		flag = 0;
+		telError.innerHTML = "请填写联系方式";	
+	}	 
+	else if(!rule.test(tel.value)){
+		flag = 0;
+		telError.innerHTML = "请填写正确联系方式";	
+	}
+	else{
+		flag = 1;
+		cardnumberError.innerHTML = "";	
+	}
+}
+//验证邮箱
+function validate_email(){
+	var ema = email.value;
+	var rule = /^\w+@(\w+\.\w+)+$/;;
+	if(ema == ""){
+		flag = 0;
+		emailError.innerHTML = "请填写邮箱";
+	}	
+	else if(!rule.test(ema)){
+		flag = 0;
+		emailError.innerHTML = "请填写正确的邮箱";	
+	}
+	else{
+		flag = 1;
+		emailError.innerHTML = "";	
+	}
+}
+//验证教育经历
+function validate_edu(){
+	if(edu.value == ""){
+		flag = 0;
+		eduError.innerHTML = "请填写教育经历";	
+	}	 
+	else{
+		flag = 1;
+		eduError.innerHTML = "";	
+	}	
+}
+//验证求职意向
+function validate_jobdesier(){
+	if(jobdesier.value == ""){
+		flag = 0;
+		jobdesierError.innerHTML = "请填写教育经历";	
+	}	 
+	else{
+		flag = 1;
+		jobdesierError.innerHTML = "";	
+	}	
+}
+//提交表单的验证
+function validate_btn(){
+	validate_name();
+	validate_workyear();
+	validate_nowLoc();
+	validate_tel();	
+	validate_email();
+	validate_edu();
+	validate_jobdesier();
+	validate_cardnumber();
+	validate();
+}
+function validate(){
+	if(flag == 0){
+		return false;	
+	}	
+	return true;
+}
+//实现年月日的级联
+var birthyear = document.getElementById("birthyear");
+var birthmonth = document.getElementById("birthmonth");
+var birthday = document.getElementById("birthday");	
+
+function chengeDay(){
+	
+	birthday.length = 0;
+	var year = 1997 - parseInt(birthyear.selectedIndex);
+	var month = 1 + parseInt(birthmonth.selectedIndex);
+	var day = daysInMonth(year,month);
+	for(var i = 1; i <= day; i++){
+		var t = new Option(i,i);	
+		birthday.options.add(t);	
+	}	
+		
+}
+function daysInMonth(year,month){
+	var days = 0;
+	switch(month){
+	case 4:
+	case 6:
+	case 9:
+	case 11:
+		days = 30;
+		break;
+	case 2:
+		if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0){
+			days = 29;
+		}
+		else{
+			days = 28;
+		}
+		break;
+	default:
+		days = 31;	
+	}
+	return days;
+}	
+	 
+//实现回车切换TAB键的效果
+function enterKey(){
+	if(event.srcElement.type != "button"){
+		if(event.keyCode == 13){
+			event.keyCode = 9;
+		}
+	}
+	else{
+		validate_btn();
+	}
+}
+</script>
+</html>

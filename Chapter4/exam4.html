@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<form action="success.html" method="post" id="frm">
+  userName:
+  <input type="text" id="userName" onkeydown="enterKey()" onkeyup="upKey()" onkeypress="pressKey()" onblur="validate()"/>
+  <div id="nameError" style="color:red; display:inline"></div>
+  <br />
+  password:
+  <input type="password" id="pwd" onkeydown="enterKey()" onblur="validate()"/>
+  <div id="pwdError" style="color:red; display:inline"></div>
+  <br />
+  confirmpassword:
+  <input type="password" id="confirmPwd" onkeydown="enterKey()" onblur="validate()"/>
+  <div id="confirmPwdError" style="color:red; display:inline"></div>
+  <br />
+  email:
+  <input type="text" id="email" onkeydown="enterKey()" />
+  <br />
+  <input type="button" style="background-color:#0CF; border:#000 1px solid; width:100px; height:25px; text-align:center; line-height:25px; cursor:hand" onclick="validate()" onkeydown="enterKey()" value="login">
+</form>
+<script>
+function validate(){
+	//获取表单校验的元素对象
+	var name = document.getElementById("userName");
+	var pwd = document.getElementById("pwd");
+	var confirmPwd = document.getElementById("confirmPwd");
+	var email = document.getElementById("email");
+	var nameError = document.getElementById("nameError");
+	var pwdError = document.getElementById("pwdError");
+	var confirmPwdError = document.getElementById("confirmPwdError");
+	
+	//alert(pwdError);
+	//清空错误信息
+	nameError.innerHTML = "";
+	pwdError.innerHTML = "";
+	confirmPwdError.innerHTML = "";
+	
+	var flag = true;
+	//非空验证
+	if(name.value == ""){
+		//alert("请填写用户名！");
+		nameError.innerHTML = "name is error!";
+		//光标聚焦
+		//name.focus();
+		//return;
+		flag = false;
+	}
+	if(pwd.value == ""){
+		//alert("请填写密码！");
+		pwdError.innerHTML = "password is error!";
+		//pwd.focus();
+		//return;	
+		flag = false;
+	}
+	if(confirmPwd.value == ""){
+		//alert("请填写确认密码！");
+		confirmPwd.innerHTML = "confirmPassword is error";
+		//confirmPwd.focus();
+		//return;	
+		flag = false;
+	}	
+	
+	//验证成功，手动提交表单
+	if(flag){
+		document.getElementById("frm").submit();
+	}
+	
+}
+
+function enterKey(){
+	//alert("按下了键盘");
+	//event表示时间参数对象，用来封装和事件有关的所有数据的
+	//keyCode表示获取按键的ASCII值
+	//在onkeydown事件中可以获取所有按键的ASCII值，但是对大小写字母不敏感，只能获取字母对应的大写ASCII值
+	//alert(event.keyCode);
+	
+	//如果当前的表单元素不为按钮时则调用切换效果
+	if(event.srcElement.type != "button"){
+		//回车切换TAB键，判断当前按键的ASCII值，如果是回车则改为TAB
+		if(event.keyCode == 13){
+			event.keyCode = 9;
+		}
+	}
+	//判断当前文本框是否是最后一个文本框
+	//srcElement表示事件源
+	else{
+		validate();
+	}
+}
+function upKey(){
+	//alert("松开了按键");	
+}
+function pressKey(){
+	//alert("press键盘");
+	//在onkeypress事件中，只能获取按键的ASCII值，不能获取其他功能键，但是对大小写字母敏感
+	//alert(event.keyCode);	
+}
+</script>
+</body>
+</html>

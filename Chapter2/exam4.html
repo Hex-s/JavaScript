@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<script>
+var btnStart;
+var btnStop;
+function init(){
+	btnStart = document.getElementById("btnStart");
+	btnStop = document.getElementById("btnStop");
+}
+window.onload = init;
+
+</script>
+<body>
+<input id="time" type="text" style="border:1px solid; width:300px" readonly="readonly"/><br />
+<input type="button" value="start" onclick="showTime()" id="btnStart"/>
+<input type="button" value="stop" onclick="stopTime()" disabled="disabled" id="btnStop"/>
+<script>
+function show(){
+	//alert("hello");
+	//延迟指定的毫秒数调用某个方法
+	//window.setTimeout("show()",2000);
+}
+//show();
+
+//间隔指定的毫秒值反复调用某个方法
+//window.setInterval("show()",2000);
+
+
+//定时器
+var timer;
+function showTime(){
+	//启用暂停按钮
+	btnStop.disabled = false;
+	btnStart.disabled = true;
+	//获取系统时间
+	var date = new Date();
+	var time = document.getElementById("time");
+	//获取时间单位
+	var year = date.getFullYear();
+	//月份范围 0-11
+	var month = date.getMonth()+1;
+	var day = date.getDate();
+	var hour = date.getHours();
+	var minute = date.getMinutes();
+	var second = date.getSeconds();
+	var milliSecond = date.getMilliseconds();
+	//time.value = date.toLocaleString();
+	time.value = year+"年"+month+"月"+day+"日  "+hour+":"+minute+":"+second+":"+milliSecond;
+	//反复调用该方法
+	timer = window.setTimeout("showTime()",1000);
+}
+
+function stopTime(){
+	btnStop.disabled = true;
+	btnStart.disabled = false;
+	//暂停定时器
+	window.clearTimeout(timer);
+}
+
+</script>
+</body>
+</html>

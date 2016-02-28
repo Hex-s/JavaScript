@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>用户登录页面</title>
+</head>
+<link href="css.css" type="text/css" rel="stylesheet" />
+<body>
+<!--总体-->
+<div style="width:965px;margin:0px auto;">
+	<!--前程无忧图片-start-->	
+	<div style=" width:143px; height:60px; float:left; margin-left:15px;"><img src="image/logo.gif" /></div>
+    <!--前程无忧图片-end-->
+    <!--My51job……-start-->		
+	 <div id="index_menu" style="width:300px; height:31px;">
+        <div><a href="login.html" style="background-image:url(image/menu1-1.gif); display:block; height:31px; width:96px;"></a></div>
+         <div><a href="search.html" style="background-image:url(image/menu2-2.gif); display:block; height:31px; width:96px;"></a></div>
+         <div><a href="intro.html" style="background-image:url(image/menu3-2.gif); display:block; height:31px; width:96px;"></a></div>
+  </div>
+    <!--My51job……-end-->	
+    <!--位置栏……-start-->	
+    <div class="menu">我的简历 | 个人搜索器 | 职位收藏夹 | 工作申请记录 | 退出</div>
+    <!--位置栏……-end-->
+   	<!--主题部分 -start-->
+    <div style="width:965px;">
+    <!--左侧注册部分 --start-->
+    <div style="width:330px; float:left; height:330px; margin-left:30px; margin-top:30px;">
+      <div style="width:324px; height:36px;"><img src="image/Login_top.gif" /></div>
+      <div style="width:21px; height:254px;float:left;"><img src="image/Login_left.gif" /></div>
+      <div style="width:282px; height:254px; float:left; background-color:#FFFFF7; text-align:center;">
+        <FORM action="intro.html" method="post" if="myform" onSubmit="return validate()">
+          <table style="width:240px; height:200px;">
+            <tr>
+              <td class="login_sub">会员名：</td>
+              <td align="left"><input id="username" type="text" size="15" onblur="validate_name()" onkeydown="enterKey()"/><div class="login_error" id="errorName"></div></td>
+            </tr>
+            <tr>
+              <td class="login_sub">密&nbsp;&nbsp;&nbsp;码：</td>
+              <td align="left"><input id="pwd" type="password" size="17" onblur="validate_pwd()" onkeydown="enterKey()"/><div class="login_error" id="errorPwd"></div></td>
+            </tr>
+            <tr>
+              <td colspan="2" align="center"><input id="log" type="submit" value="登录"  onclick="validate_btn()"style="background-image:url(image/login-sm2.gif); width:100px; height:33px; line-height:33px;; border:0px;background-color:#fffff7;" onkeydown="enterKey()"/></td>
+            </tr>
+            <tr>
+              <td colspan="2" align="center"><a href="register.html"><img src="image/login-1.gif" border="0"></a></td>
+            </tr>
+          </table>
+        </FORM>
+      </div>
+      <div style="width:21px; height:254px;float:left;"><img src="image/Login_right.gif" /></div>
+      <div style="width:324px; height:30px;"><img src="image/Login_bottom.gif" width="324px" height="30px"/></div>
+    </div>
+    <!--左侧注册部分 --end--> 
+    
+     <!--右侧提示部分 --start-->
+    <div style="width:450px; height:300px; float:left;margin-left:20px; margin-top:30px;"> 
+      <!--我的简历 -start-->
+      <table width="450px" height="250px" style="line-height:20px; letter-spacing:1px; font-size:12px; color:#333; margin-top:25px;">
+        <tr>
+          <td><img src="image/pic1.jpg" /></td>
+          <td><span class="login-info">我的简历</span> <br>
+            51job的简历中心，您可以在此创建自己专业的个性化的简历。</td>
+        </tr>
+        <tr>
+          <td><img src="image/pic2.jpg" /></td>
+          <td><span class="login-info">找工作</span><br>
+            在茫茫职场中如何找工作？51job的职位搜索器助您一臂之力！</td>
+        </tr>
+        <tr>
+          <td><img src="image/pic3.jpg" /></td>
+          <td><span class="login-info">在线申请</span> <br>
+            当您找到感兴趣的职位时，可以立即将您在51job上的简历在线投递给招聘单位。</td>
+        </tr>
+        <tr>
+          <td><img src="image/pic4.jpg" /></td>
+          <td><span class="login-info">我的搜索和订阅</span> <br>
+            设置并订阅您个性化的职位搜索器，51job会贴心的将理想的职位发送到您的信箱中。</td>
+        </tr>
+      </table>
+      <!--我的简历 -end--> 
+    </div>
+    <!--右侧提示部分 --end--> 
+    	
+    </div>	
+    <!--主题部分 -end-->
+    <!--尾部导航 -start-->
+    <div class="menu" id="bg_menu">
+    	网站导航 | <a href="index.html">网站首页</a> | <a href="search.html">职位搜索</a> | <a href="login.html">Myjob</a> | <a href="register.html">用户注册</a> | <a href="login.html">用户登录</a> | <a href="intro.html">简历管理</a> | <a href="company.html" >招聘公司</a>
+    </div>
+    <!--尾部导航 -end-->
+    <!--尾部信息 -start-->
+    <div style="text-align:center; color:#333; width:965px; height:150px; line-height:25px; letter-spacing:1px;">
+    人才招聘 Email:hr@51job.com<br />个人求职 Email:club@51job.com　或垂询:800-820-5100<br /> 未经本招聘网站同意，不得转载本网站之所有招聘信息及作品<br />无忧工作网版权所有©1999-2007<br />
+ <a href="http://www.miibeian.gov.cn" target="_blank"><img src="image/bottom1.gif" border="0"/></a>
+    </div>
+    <!--尾部信息 -end--> 
+</div>    
+<!--总体结束-->
+ 
+</body>
+
+<script src="javascrip.js"></script>
+<script>
+var myJob = document.getElementById("myJob");
+var jobSearch = document.getElementById("jobSearch");
+var resumeMag = document.getElementById("resumeMag");
+
+var name = document.getElementById("userName");
+var pwd = document.getElementById("pwd");
+var errorName = document.getElementById("errorName");
+var errorPwd = document.getElementById("errorPwd");
+var form = document.getElementById("myform");
+var btn = document.getElementById("log");
+var flag = 1;
+  
+  function init(){
+	  flag = 1;
+	  errorName.innerHTML = "";	
+	  errorPwd.innerHTML = "";	
+  }
+  //验证用户名
+  function validate_name(){
+	
+	if(name.value == ""){
+		flag = 0;
+		errorName.innerHTML = "×";	
+	}  
+	else{
+		flag = 1;
+		errorName.innerHTML = "√";	
+	}
+  }
+
+  //验证密码
+  function validate_pwd(){
+	
+	if(pwd.value == ""){
+		flag = 0;
+		errorPwd.innerHTML = "×";	
+	} 
+	else{
+		flag = 1;
+		errorPwd.innerHTML = "√";	
+	} 
+  }
+  
+  //登录按钮
+  btn.onmouseover = function(){
+	btn.style.backgroundImage = "url(image/login-sm1.gif)";  
+  }
+   btn.onmouseout = function(){
+	btn.style.backgroundImage = "url(image/login-sm2.gif)";  
+  }
+  
+  function validate_btn(){
+	  validate_name();
+	  validate_pwd();
+	  validate();
+  }
+  
+  function validate(){
+	if(flag == 1){
+		return true;
+	}
+	return false;		
+ }
+  
+  //实现回车切换TAB键的效果
+function enterKey(){
+	if(event.srcElement.type != "button"){
+		if(event.keyCode == 13){
+			event.keyCode = 9;
+		}
+	}
+	else{
+		validate_btn();
+	}
+}
+
+</script>
+</html>

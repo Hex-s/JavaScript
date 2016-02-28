@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<script>
+function show(){
+	alert(document.getElementById("num1").value);
+}
+
+</script>
+<body>
+<input type="button" value="press" onclick="btnClick()"/>
+<!-- 标签的onXXX事件中可以写入js代码 -->
+<input id="btn" type="button" value="click" onclick="alert(niit);"/>
+<hr />
+<input type="text" id="num1" value="niit"/>
+<input type="button" id="btnNum" value="getNum"  onclick="showText()"/><br />
+<input type="text" id="num2" />
+<input type="button" value="setNum" onclick="setText()"/>
+</body>
+<script>
+
+show();
+
+var niit = "hello";
+//构建无参无返回值的方法
+function btnClick(){
+	alert("hello niit");	
+}
+//方法的调用 方式一
+//btnClick();
+//方法的调用 方式二 在标签的事件中进行调用
+//方法的调用 方式三 在对象中通过事件进行调用
+//获取页面中指定id的标签对象,获取标签对象需要页面中加载该标签后才能访问获取到
+//var btnObj = document.getElementById("btn");
+//将方法进行事件绑定
+//btnObj.onclick = btnClick;
+
+//带参方法,声明方法时直接写参数名
+function method(num1, num2){
+	var result = num1+num2;
+	alert(result);
+}
+//调用带参方法
+//method(19,28);
+
+//带有返回值的方法
+function method1(num1, num2){
+	var result = num1+num2;
+	//方法只能返回一个值，并且return后的代码不可达
+	return result;	
+}
+//调用带返回值的方法
+var result = method1(10,20);
+//alert(result);
+
+
+function showText(){
+	//获取文本框对象
+	var txtNum1 = document.getElementById("num1");
+	//获取文本框的值
+	var value = txtNum1.value;
+	alert(value);
+}
+function setText(){
+	//获取第二个文本框的值
+	var value = document.getElementById("num2").value;
+	//将第二个文本框的值写入第一个文本框
+	document.getElementById("num1").value = value;
+	
+}
+
+
+
+</script>
+</html>

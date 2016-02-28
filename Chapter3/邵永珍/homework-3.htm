@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>无标题文档</title>
+</head>
+
+<body>
+<div id="game1" style=" display:block; background-image:url(image/gameTab1.jpg);width:82px; height:47px;left:0px; top:0px; position:absolute; z-index:1;" onClick="game()"></div>
+<div id="game2" style=" display:none; background-image:url(image/gameTab2.jpg);width:82px; height:47px;left:0px; top:0px; position:absolute;z-index:1;" onClick="game()"></div>
+
+<div id="mobile1" style=" display:block; background-image:url(image/mobileTab2.jpg); width:82px; height:47px; left:83px; top:0px; position:absolute;z-index:1;" onClick="moblie()"></div>
+<div id="mobile2" style=" display:none; background-image:url(image/mobileTab1.jpg); width:82px; height:47px; left:83px; top:0px; position:absolute;z-index:1;" onClick="moblie()"></div>
+
+<div id="mbody1" style="display:block; background-image:url(image/mobile.jpg);width:165px; height:171px; position:absolute;z-index:1; top:47px;left:0px;"></div>
+<div id="mbody2" style="display:none; background-image:url(image/game.jpg);width:165px; height:171px; position:absolute;z-index:1; top:47px;left:0px;"></div>
+
+<div style="background-image:url(image/fly.jpg) ; width:165px; height:43px; position:absolute; z-index:2; left:0px; top:175px;"></div>
+</body>
+<script>
+
+	var game1 = document.getElementById("game1");
+	var mobile1 = document.getElementById("mobile1");
+	var mbody1 = document.getElementById("mbody1");
+	var game2 = document.getElementById("game2");
+	var mobile2 = document.getElementById("mobile2");
+	var mbody2 = document.getElementById("mbody2");
+	
+	function game(){
+		game1.style.display = "none";
+		game2.style.display = "block";
+		mobile1.style.display = "none";
+		mobile2.style.display = "block";
+		mbody1.style.display = "none";
+		mbody2.style.display = "block";
+	}
+	
+	
+	function moblie(){
+		game2.style.display = "none";
+		game1.style.display = "block";
+		mobile2.style.display = "none";
+		mobile1.style.display = "block";
+		mbody2.style.display = "none";
+		mbody1.style.display = "block";
+	}
+</script>
+</html>

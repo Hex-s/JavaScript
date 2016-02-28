@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<select id="province" onchange="changeOption()">
+	<option value="0">请选择省份</option>
+	<option value="js">江苏省</option>
+    <option value="zj">浙江省</option>
+    <option value="sd">山东省</option>
+</select>
+<select id="city">
+	<option value="-1">请选择城市</option>
+</select>
+<script>
+var cityArray = new Array();
+cityArray[0] = ["苏州","南京","无锡"];
+cityArray[1] = ["杭州","宁波","嘉兴"];
+cityArray[2] = ["济南","青岛","烟台"];
+
+var selProvince = document.getElementById("province");
+var selCity = document.getElementById("city");
+function changeOption(){
+	//清空城市
+	selCity.length = 1;
+	//根据省份选择的索引查找对应城市的数组
+	var index = selProvince.selectedIndex;
+	for(var i = 0; i < cityArray[index-1].length; i++){
+		//创建城市选项
+		var option = new Option(cityArray[index-1][i],i);
+		selCity.options.add(option);
+	}
+}
+</script>
+</body>
+</html>

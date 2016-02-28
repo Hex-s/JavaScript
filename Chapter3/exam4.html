@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<div id="menu" style="width:160px; height:37px; background-image:url(image/Out.gif); position:absolute; left:-80px; cursor:hand" onmouseover="moveToRight()" onmouseout="moveToLeft()"></div>
+</body>
+<script>
+//定时器
+var timerRight;
+var timerLeft;
+var menuDiv = document.getElementById("menu");
+function moveToRight(){
+	//关闭左移动定时器
+	window.clearTimeout(timerLeft);
+	//修改背景图
+	menuDiv.style.backgroundImage = "url(image/Over.gif)";
+	//获取左边距
+	var left = parseInt(menuDiv.style.left);
+	//移动层
+	if(left < 0){
+		menuDiv.style.left = left+1;
+		timerRight = window.setTimeout("moveToRight()",1);
+	}
+}
+function moveToLeft(){
+	//关闭右移动定时器
+	window.clearTimeout(timerRight);
+	//修改背景图
+	menuDiv.style.backgroundImage = "url(image/Out.gif)";
+	//获取左边距
+	var left = parseInt(menuDiv.style.left);
+	if(left > -80){
+		menuDiv.style.left = left-1;
+		timerLeft = window.setTimeout("moveToLeft()",1);
+	}
+}
+</script>
+</html>

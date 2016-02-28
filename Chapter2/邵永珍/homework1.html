@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<div><input type="text" id="time" readonly="readonly"/></div>
+<div>
+	<input type="button" id="start" value="start" onclick="showTime()"/>
+	<input type="button" id="stop" value="stop" onclick="stopTime()" disabled="disabled"/>
+</div>
+</body>
+<script>
+	var btnStart = document.getElementById("start");
+	var btnStop = document.getElementById("stop");
+	//计时器
+	var timer;
+	//显示系统时间
+	function showTime(){
+		//start按钮灰化
+		btnStart.disabled = true;
+		//stop按钮取消回话
+		btnStop.disabled = false;
+		//获取系统当前时间
+		var date = new Date();
+		//获取年
+		var year = date.getFullYear();
+		//获取月
+		var month = date.getMonth()+1;
+		if(month < 10){
+			month = "0" + month;	
+		}
+		//获取日
+		var day = date.getDate();
+		if(day < 10){
+			day = "0" + day;	
+		}
+		//获取小时
+		var hour = date.getHours();
+		if(hour < 10){
+			hour = "0" + hour;	
+		}
+		//获取分
+		var minute = date.getMinutes();
+		if(minute < 10){
+			minute = "0" + minute;	
+		}
+		//获取秒
+		var second = date.getSeconds();
+		if(second < 10){
+			second = "0" + second;	
+		}
+		//判断时间段
+		var point;
+		if(hour > 12){
+			hour -= 12;
+			point = "PM";
+		}
+		else if(hour < 12){
+			point = "AM";	
+		}
+		else if(hour == 12 && second >= 0){
+			point = "PM";	
+		}
+		var time = document.getElementById("time");
+		time.value = year+"-"+month+"-"+day+" "+hour+":"+minute+":"+second+" "+point;
+		//递归
+		timer = window.setTimeout("showTime()",1000);
+	}
+	//停止时间的显示
+	function stopTime(){
+		//stop按钮灰化
+		btnStop.disable = true;
+		//start按消灰化
+		btnStart.disabled = false;
+		//暂停计时器
+		window.clearTimeout(timer);
+	}
+	
+</script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<input type="text" id="txt" /><input type="button" value="press" onclick="press()" />
+<script>
+var str = "hello niit ";
+//获取字符串的长度
+//alert(str.length);
+//获取字符串中指定字符的索引
+//alert(str.indexOf("l",3));
+//alert(str.lastIndexOf("l"));
+//字符串的截取方法
+//该方法如果传2个参数表示从指定索引截取到结束索引
+//alert(str.substring(6,8));
+//该方法表示从指定索引开始截取指定长度的字符串
+//alert(str.substr(6,2));
+//获取指定索引的字符
+//alert(str.charAt(2));
+//遍历字符串
+//for(var i = 0; i < str.length; i++){
+//	alert(str.charAt(i));	
+//}
+
+function press(){
+	//获取文本框的值
+	var value = document.getElementById("txt").value;
+	//获取字符的ASCII值
+	//alert(value.charCodeAt(0));
+	//根据ASCII值获取对应的字符
+	alert(String.fromCharCode(value));
+}
+</script>
+</body>
+</html>

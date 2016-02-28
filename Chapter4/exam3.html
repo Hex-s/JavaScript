@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<input type="text" id="txt" /><input type="button" value="validate" onclick="validate()" />
+<script>
+function validate(){
+	//定义正则表达式的规则
+	//正则表达会中|表示或者关系
+	//var rule = /^male|female$/;
+	//.表示任意字符
+	//var rule = /^......$/;
+	//中括号代表匹配单字符的范围
+	//匹配单字符只能出现0,1,2,3
+	//var rule = /^[0123]$/
+	//匹配单字符只能出现0,1,2,3,a,b,c
+	//var rule = /^[0123abc]$/;
+	//匹配所有的数字
+	//var rule = /^[0123456789]$/;
+	//var rule = /^[0-9]$/;
+	//匹配2位数字
+	//var rule = /^\d\d$/;
+	//匹配所有的字母
+	//var rule = /^[a-z,A-Z]$/;
+	//匹配单字符只能是数字和字母
+	//var rule = /^[a-z,A-Z,0-9]$/;
+	//匹配数字字母下划线
+	//var rule = /^\w$/;
+	//var rule = /^[a-z,A-Z,0-9,_]$/;
+	//表示长度为7位的字符串，必须以T_开头第三位必须是数字第四位可以是任意字符第五位必须是小写字母第六和第七可以是任意字母数字或者是下划线
+	//var rule = /^T_\d.[a-z]\w\w$/
+	
+	//如果要匹配的字符串内容就是正则中的匹配符，则使用\进行转义
+	//var rule = /^[a-z,A-Z]\.\d$/;
+	//var rule = /^[\[,\(]\.[\),\]]$/;
+	//\s用来匹配一个空格
+	//var rule = /^\d\s\d$/;
+	//\b用来匹配单词的开始和结束
+	//var rule = /^\btom\b\s\bjack\b$/;
+	//*用来匹配任意长度,限定符只对符号的前一位匹配符生效
+	//var rule = /^ab\d*$/;
+	//小括号可以将多个匹配符看成一个整体
+	//var rule = /^(ab\d)*$/;
+	//+用来表示长度至少为1位或者更多
+	//var rule = /^\d+$/;
+	//?表示匹配符的次数为0-1次
+	//var rule = /^\d?$/;
+	//大括号用来表示匹配符重复的次数
+	//匹配数字出现6次
+	//var rule = /^\d{6}$/;
+	//匹配数字至少有3位
+	//var rule = /^\d{3,}$/;
+	//匹配数字是3-6位之间
+	//var rule = /^\d{3,6}$/;
+	//匹配某个字符不包含指定内容
+	var rule = /^[^abc]$/;
+	
+	//匹配用户名只能是数字字母下划线构成长度在6-12位之间
+	//var rule = /^\w{6,12}$/;
+	//匹配邮箱
+	//var rule = /^\w+@(\w+\.\w+)+$/;
+	//匹配身份证号码(长度可以是15-18位的数字，最后位可以是x)
+	//var rule = /^(\d{14}|\d{17})(\d|x)$/;
+	
+	//匹配价格（精度最多精确到百分位）
+	//var rule = /^\d+(\.\d{1,2})?$/;
+	//匹配电话号码如果是4位区号则匹配规则为 0512-8位电话号码，如果是直辖市3位2区号 (021)8位电话号码
+	//var rule = /^((0\d{3}-)|(\(0\d{2}\)))\d{8}$/;
+	//匹配IP地址 192.168.3.100
+	//var rule = /^((\d|[1-9]\d|1\d{2}|2[0-4]\d|25[0-5])\.){3}(\d|[1-9]\d|1\d{2}|2[0-4]\d|25[0-5])$/;
+	//匹配中文
+	//var rule = /^[\u4e00-\u9fa5]+$/;
+	var value = document.getElementById("txt").value;
+	//使用正则表达式对字符串进行校验
+	if(rule.test(value)){
+		alert("success");	
+	}
+	else{
+		alert("failed");	
+	}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<div id="ad" style="width:180px; height:230px; background-image:url(image/advpic.gif); position:absolute; left:50px; top:50px;" onclick="location.href='exam4.html'">
+<img src="image/close.jpg" style="position:relative; left:167px; top:217px; cursor:hand" width="13" height="13" onclick="closeAd()"/>
+</div>
+
+<img src="image/contentpic.jpg" />
+
+<script>
+var ad = document.getElementById("ad");
+var adTop = parseInt(ad.style.top);
+window.onscroll = function(){
+	//alert("滚动条滚动了");
+	//获取滚动条卷起的高度
+	//window.status = document.documentElement.scrollTop;	
+	var top = document.documentElement.scrollTop;
+	ad.style.top = adTop+top;
+}
+function closeAd(){
+	//隐藏广告层
+	ad.style.display = "none";
+}
+</script>
+</body>
+</html>

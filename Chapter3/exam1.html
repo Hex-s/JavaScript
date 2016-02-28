@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<style>
+#login{ background-image:url(image/back1.jpg); display:block; width:82px; height:23px; text-decoration:none; text-align:center; line-height:23px;}
+#login:hover{background-image:url(image/back2.jpg); text-decoration:underline; }
+
+.btnOut{ background-image:url(image/back1.jpg);width:82px; height:23px; border:0px }
+.btnOver{ background-image:url(image/back2.jpg);width:82px; height:23px; border:0px}
+
+</style>
+<body>
+<a id="login" href="#">login</a>
+<input id="btnLogin" type="button" value="login"  onmouseover="over()" onmouseout="out()" class="btnOut"/>
+<input id="txt" type="text" value="hello" />
+</body>
+<script>
+var btn = document.getElementById("btnLogin");
+function over(){
+	//alert("鼠标进入");
+	//btn.style.backgroundImage = "url(image/back2.jpg)";
+	//通过脚本访问已有的类样式
+	btn.className = "btnOver";
+}
+function out(){
+	//alert("鼠标离开");
+	//btn.style.backgroundImage = "url(image/back1.jpg)";
+	btn.className = "btnOut";
+}
+var txt = document.getElementById("txt");
+//通过脚本控制样式
+//修改字体颜色
+txt.style.color = "red";
+//修改字体的大小
+txt.style.fontSize = "12px";
+//修改文本框的边框
+txt.style.borderStyle = "dashed";
+//修改文本框的宽度
+txt.style.borderWidth = 5;
+</script>
+</html>

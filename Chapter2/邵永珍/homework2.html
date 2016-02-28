@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<form action="" method="post" name="form">
+<table width="500" height="130" border="1" bgcolor="#FFC8C8" align="center" cellpadding="0" cellspacing="0">
+  <tr align="center">
+    <td colspan="5" ><font size="+1"><b>简易购物车</b></font></td>
+  </tr>
+  <tr align="center">
+    <td>商品名称</td>
+    <td>数量(件)</td>
+    <td>单价(美元)</td>
+    <td>运费(美元)</td>
+    <td>合计</td>
+  </tr>
+  <tr align="center">
+    <td>跑跑道具</td>
+    <td>5</td>
+    <td>12.5</td>
+    <td>10</td>
+    <td>72.5美元</td>
+  </tr>
+  <tr align="center">
+    <td colspan="5" scope="row"><a href="javascript:openWindow()">填写你的邮寄地址</a><input type="text" id="address" size="40" disabled="disabled"/><input type="button" value="提交订单" onclick="showInfo()"/></td>
+    </tr>
+</table>
+</form>
+</body>
+<script>
+	//打开模式窗体
+	function openWindow(){
+		var address = window.showModalDialog("address.html","","dialogWidth=330px;dialogHeight=260px");
+		document.getElementById("address").value = address;
+	}
+	//显示订单信息
+	function showInfo(){
+		var address=document.getElementById("address").value;
+		var flage=confirm("您本次购买的商品信息如下：\n商品名称：跑跑游戏道具；\n商品数量：5件；\n商品单价：12.5美金；\n运费：10美金；\n费用总计：72.5美金；\n送货地址:"+address+"\n请确认以上信息是否有误！！！");
+		if(flage){
+			alert("您的订单已提交");
+		}	
+	}
+</script>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<script src="common.js"></script>
+<body>
+<div style="width:800px; margin:auto;">
+	<div style=" width:700px; margin:auto">
+    	<!--显示名字-->
+    	<div id="nameDiv" style="height:400px; background-color:#900; color:white; font-size:100px; font-weight:bold; text-align:center; line-height:400px; letter-spacing:20px"></div>
+        <!--按钮-->
+    	<div style="text-align:center">
+        	<input id="btn" type="button" value="开始" style=" width:100px; height:30px; background-color:#D7F2FF; border:1px #069 solid; margin-top:20px; cursor:hand;" onmouseover="btnOver(this)" onmouseout="btnOut(this)" onclick="run()"/>
+        </div>
+    </div>
+    <!--呈现中奖名单-->
+    <div id="showDiv" style="color:#F00; margin-top:30px; font-size:13px;"></div>
+</div>
+<script>
+function btnOver(obj){
+	obj.style.backgroundColor = "#95DDFF";
+}
+function btnOut(obj){
+	obj.style.backgroundColor = "#D7F2FF";
+}
+var array = new Array("张奥林","朱洁","王苏苏","张月","王浩沣","王野平","周有亮","倪晨星","王鑫");
+//获取0-9的随机数
+//alert(Math.floor(Math.random()*10))
+
+var nameDiv = document.getElementById("nameDiv");
+var btn = document.getElementById("btn");
+var showDiv = document.getElementById("showDiv");
+//定时器
+var timer;
+function showLuckyName(){
+	//根据数组的索引产生一个随机索引	
+	var index = Math.floor(Math.random()*array.length);
+	//根据索引获取数组的元素并显示在层中
+	nameDiv.innerHTML = array[index];
+	//开启定时器反复作用
+	timer = window.setTimeout("showLuckyName()",50);
+}
+function run(){
+	//获取按钮的文字内容
+	var value = btn.value;
+	//判断当前按钮的类型
+	if(value == "开始"){
+		showLuckyName();
+		btn.value = "暂停";
+	}
+	else if(value == "暂停"){
+		//停止定时器
+		window.clearTimeout(timer);
+		//获取当前显示的姓名，并将该姓名从数组中移除
+		var name = nameDiv.innerHTML;
+		array = remove(array,name);
+		//将抽中的姓名显示在下方的层中
+		showDiv.innerHTML = showDiv.innerHTML+"<span style='margin-right:20px'>"+name+"</span>";
+		//判断姓名后数组中是否还有元素
+		if(array.length > 0){
+			//修改按钮的文字
+			btn.value = "继续";	
+		}
+		else{
+			btn.disabled = true;
+			nameDiv.innerHTML = "GameOver";
+		}
+		
+	}
+	else{
+		showLuckyName();
+		btn.value = "暂停";
+	}
+}
+</script>
+</body>
+</html>

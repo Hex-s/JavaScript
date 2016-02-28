@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<style>
+*{ font-size:13px}
+</style>
+<body>
+<select id="sel" onchange="changePage()">
+	<option value="0">--请选择--</option>
+	<option value="pageA.html">pageA</option>
+    <option value="pageB.html">pageB</option>
+    <option value="pageC.html">pageC</option>
+    <option value="pageD.html">pageD</option>
+</select>
+<!-- 超链接不应使用onclick事件，可以在href属性添加javascript:脚本的方式实现 -->
+<a href="javascript:history.back()">后退</a>
+<a href="javascript:history.forward()">前进</a>
+<a href="javascript:location.reload()">刷新</a>
+<a href="javascript:location.assign('assingPage.html')">加载</a>
+<a href="javascript:location.replace('replacePage.html')">替换</a>
+</body>
+<script>
+function changePage(){
+	//获取下拉列表框选择的值
+	var url = document.getElementById("sel").value;
+	//alert(url);
+	if(url != "0"){
+		//根据选择的值进行页面的跳转
+		window.location.href = url;
+	}
+	
+}
+</script>
+<img src="images/forum.jpg" />
+</body>
+</html>

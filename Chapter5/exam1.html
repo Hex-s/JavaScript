@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<input type="button" value="弹出" onclick="popDiv()"/>
+<div id="div" style="width:150px; height:150px; background-color:#FC0; position:absolute; left:100px; top:100px; color:white; font-weight:bold; display:none; z-index:2"></div>
+<div id="overDiv" style="background-color:#000; position:absolute; left:0px; top:0px; display:none; z-index:1; filter:alpha(opacity=60); opacity:0.6; "></div>
+
+<script>
+var overDiv;
+window.onload = function(){
+	overDiv = document.getElementById("overDiv");
+	overDiv.style.width = document.documentElement.clientWidth;
+	overDiv.style.height = document.documentElement.clientHeight;	
+}
+
+var div = document.getElementById("div");
+var left;
+var top;
+var x;
+var y;
+var isDown;
+var width;
+var height;
+div.onmousedown = function(){
+	//方式一
+	/*x = event.clientX;
+	y = event.clientY;
+	left = parseInt(div.style.left);
+	top = parseInt(div.style.top);
+	isDown = true;*/
+	
+	//方式二
+	//记录鼠标按下的坐标和层的初始边距
+	x = event.clientX;
+	y = event.clientY;
+	left = parseInt(div.style.left);
+	top = parseInt(div.style.top);
+	isDown = true;
+	//计算鼠标按下位置与层边框线的边距
+	width = x-left;
+	height = y-top;
+	
+	//将层透明化
+	div.style.filter = "alpha(opacity=60)";
+	
+}
+document.onmousemove = function(){
+	//获取鼠标相对于浏览器的坐标
+	//div.innerHTML = event.clientX+","+event.clientY;
+	//获取鼠标相对于屏幕的坐标
+	//div.innerHTML = event.screenX+","+event.screenY;
+	//方式一
+	/*if(isDown){
+		var nowX = event.clientX;
+		var nowY = event.clientY;
+		var moveX = nowX-x;
+		var moveY = nowY-y;
+		div.style.left = left+moveX;
+		div.style.top = top+moveY;
+	}	*/
+	
+	//方式二
+	if(isDown){
+		//记录鼠标移动中坐标
+		var nowX = event.clientX;
+		var nowY = event.clientY;
+		//计算移动层的边距
+		left = nowX-width;
+		top = nowY-height;
+		div.style.left = left;
+		div.style.top = top;
+	}
+}
+div.onmouseup = function(){
+	isDown = false;	
+	//将层设为不透明
+	div.style.filter = "alpha(opacity=100)";
+}
+/*onmousedown鼠标按下
+1.获取当前鼠标按下时的坐标位置
+2.获取当前层的边距
+3.记录鼠标按下的标识
+
+onmousemove鼠标移动
+层的边距会随着鼠标的移动而发生改变
+如果鼠标是按下的状态
+1.记录鼠标移动时的坐标
+2.计算鼠标移动的距离
+3.根据移动距离修改层的边距
+
+onmouseup鼠标按键松开
+修该鼠标按下的标识
+*/
+
+function popDiv(){
+	//overDiv.style.display = "block";
+	div.style.display = "block";	
+}
+
+
+</script>
+</body>
+</html>

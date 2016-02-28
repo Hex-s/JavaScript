@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+
+<form action="" name="addressform" method="post">
+<table width="290" height="200" align="center" border="0" bgcolor="#FFC8C8" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="2" align="center">送货地址确认</td>
+  </tr>
+  <tr>
+    <td width="125" align="right">省份：</td>
+    <td width="165">
+	<select name="province">
+	  <option value="北京市">北京市</option>
+	  <option value="广东省">广东省</option>
+	  <option value="河北省">河北省</option>
+	  <option value="四川省">四川省</option>
+	  <option value="江苏省">江苏省</option>
+	</select>
+	</td>
+  </tr>
+  <tr>
+    <td align="right">城市：</td>
+    <td>
+	<select name="city">
+	  <option value="北京市" selected>北京市</option>
+	  <option value="上海市">上海市</option>
+	  <option value="广州市">广州市</option>
+	  <option value="邯郸市">邯郸市</option>
+	  <option value="峨眉山市">峨眉山市</option>
+	</select>
+	</td>
+  </tr>
+  <tr>
+    <td align="right">区：</td>
+    <td>
+	<select name="district">
+	  <option value="西城区">西城区</option>
+	  <option value="海淀区">海淀区</option>
+	  <option value="白云区">白云区</option>
+	  <option value="解放区">解放区</option>
+	  <option value="进城区">进城区</option>
+	</select>
+	</td>
+  </tr>
+  <tr>
+    <td align="right">街道：</td>
+    <td><input id="street" type="text" size="20"></td>
+  </tr>
+  <tr>
+    <td align="right">门牌号：</td>
+    <td><input id="number" type="text" size="20"></td>
+  </tr>
+    <tr>
+    <td colspan="2" align="center"><input id="btnConfirm" type="button" value="确认" onClick="closeWindow()"></td>
+  </tr>
+</table>
+</form>
+</body>
+<script>
+function closeWindow(){
+	var province = document.addressform.province.value;
+	var city = document.addressform.city.value;
+	var district = document.addressform.district.value;
+	var number = document.getElementById("number").value;
+	var street = document.getElementById("street").value;
+	if(province == city){
+		window.returnValue = city+district+street+number;
+	}
+	else{
+		window.returnValue = province+city+district+street+number;
+	}
+	window.close();
+}
+</script>
+</html>

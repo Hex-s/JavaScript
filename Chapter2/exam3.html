@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--自动刷新页面-->
+<!--<meta http-equiv="refresh" content="2" />-->
+<title>无标题文档</title>
+</head>
+
+<body>
+<input type="button" value="关闭" onclick="closeWindow()" />
+<!--<iframe name="frm" src="frame.html" width="400" height="400"></iframe>-->
+<hr />
+<input type="text" id="txt"/>
+<input type="button" value="open" onclick="openChild()" />
+<input type="button" value="modalDialog" onclick="showModal()" />
+</body>
+<script>
+//设置窗体状态栏的文字内容
+window.status = "hello niit";
+//获取屏幕的信息
+//alert(window.screen.width+"*"+window.screen.height);
+
+//弹出输入框
+//window.prompt("title","default");
+//弹出确认对话框
+//if(window.confirm("是否确认要删除")){
+//	alert("删除");
+//}
+//else{
+//	alert("取消了操作");	
+//}
+
+//window.close();
+
+function closeWindow(){
+	//关闭窗体
+	window.close();
+}
+//当窗体加载完所有组件后触发的事件
+//window.onload = function(){
+//	alert("窗体正在加载");
+//}
+//window.onunload = function(){
+//	alert("窗体正在卸载");	
+//}
+
+function openChild(){
+	//打开新窗口 参数表示新窗体打开的URL地址
+	//window.open("child.html");
+	//第一个参数表示新窗体的URL
+	//第二个参数表示新窗体打开的方式，可以写入4个系统值：_top,_parent,_self,_blank
+	//第三个参数表示设置新窗体的属性特征
+	//window.open("child.html","frme","width=600,height=300,left=300,top=150,menubar=yes,toolbar=1,status=1,resizable=1,scrollbars=1,location=1");
+	window.open("child.html","a","width=600,height=300");
+}
+function showModal(){
+	//打开模式对话框并返回窗口打开后的结果
+	var value = window.showModalDialog("child.html","dialog","dialogWidth=600px;dialogHeight=300px");
+	//将模式对话框中的文本框的值写入到当前窗体的文本框内
+	//alert(value);
+	document.getElementById("txt").value = value;
+}
+
+</script>
+</html>

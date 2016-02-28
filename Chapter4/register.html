@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<style>
+div {
+	margin:0px auto;
+}
+</style>
+<body>
+<div style="background-color:#FFE8F3; width:500px; height:450px;" align="center">
+  <form action="success.html" method="post" id="frm" onsubmit="return validate()">
+    <table width="450" height="300" border="1">
+      <tr>
+      	<caption style="font-size:22px; font-weight:bold;">注册</caption>
+        <td align="right">用户名：</td>
+        <td align="left"><input type="text" id="userName" size="18" onkeydown="enterKey()"onblur="validate_name()"/><div id="nameError" style="display:inline; color:#00F;"></div></td>
+      </tr>
+      <tr>
+        <td align="right">密码：</td>
+        <td align="left"><input type="password" id="pwd" onkeydown="enterKey()" onblur="validate_pwd()"/><div id="pwdError" style="display:inline; color:#00F;"></div></td>
+      </tr>
+      <tr>
+        <td align="right">确认密码：</td>
+        <td align="left"><input type="password" id="confirmPwd" onkeydown="enterKey()" onblur="validate_confirmPwd()"/><div id="confirmPwdError" style="display:inline; color:#00F;"></div></td>
+      </tr>
+      <tr>
+        <td align="right">性别：</td>
+        <td align="left"><input type="radio" value="male" name="sex" checked="checked" onkeydown="enterKey()"/>男&nbsp;<input type="radio" value="female" name="sex"/>女<div id="sexError" style="display:inline; color:#00F;"></div></td>
+      </tr>
+      <tr>
+        <td align="right">出生日期：</td>
+        <td align="left">年：<input type="text" size="2" onkeydown="enterKey()" id="year"/>&nbsp;月：<input type="text" size="2" onkeydown="enterKey()" id="month"/>&nbsp;日：<input type="text" size="2" onkeydown="enterKey()" id="day"/></td>
+      </tr>
+      <tr>
+        <td align="right">邮箱：</td>
+        <td align="left"><input type="text" id="email" onkeydown="enterKey()" onblur="validate_email()"/><div id="emailError" style="display:inline; color:#00F;"></div></td>
+      </tr>
+      <tr>
+      	<td colspan="2"><input type="button" id="submit" value="注册" onclick="validate();validate_birth()" /></td>
+      </tr>
+    </table>
+    
+  </form>
+</div>
+</body>
+
+<script>
+    //获取表单校验的元素对象
+	var name = document.getElementById("userName");
+	var pwd = document.getElementById("pwd");
+	var confirmPwd = document.getElementById("confirmPwd");
+	var sex = document.getElementsByName("sex");
+	var email = document.getElementById("email");
+	var year = document.getElementById("year");
+	var month = document.getElementById("month");
+	var day = document.getElementById("day");
+	var nameError = document.getElementById("nameError");
+	var pwdError = document.getElementById("pwdError");
+	var confirmPwdError = document.getElementById("confirmPwdError");
+	var sexError = document.getElementById("sexError");
+	var emailError = document.getElementById("emailError");
+	var flag = 0;
+	function init(){
+		flag = 0;
+		//清空错误消息
+		nameError.innerHTML = "";
+		pwdError.innerHTML = "";
+		confirmPwdError.innerHTML = "";
+		sexError.innerHTML = "";
+		emailError.innerHTML = "";
+	}
+	
+	
+	//验证用户名是否正确 用户名要求数字字母下划线和中文长度不能低于4位
+	function validate_name(){
+		init();
+		var rule = /^([\u4e00-\u9fa5]*\w*)+$/;
+		if(name.value == "" || name.value.length < 4 || !(rule.test(name.value))){
+			nameError.innerHTML = "name is error!";	
+			flag = 1;
+		}
+	}
+	
+	//验证密码是否正确 数字字母下划线和$构成，密码长度在6-20之间
+	function validate_pwd(){
+		init();
+		var rule = /^([\w,$]){6,20}$/;
+		if(pwd.value == "" || !rule.test(pwd.value)){
+			pwdError.innerHTML = "password is error!";
+			flag = 1;
+		}	
+	}
+	//验证确认密码必须和密码是否相同
+	function validate_confirmPwd(){
+		init();
+		if(pwd.value != confirmPwd.value){
+			confirmPwdError.innerHTML = "confirmPassword is error!";
+			flag = 1;
+		}
+	}
+	//验证邮箱是否正确
+	function validate_email(){
+		init();
+		var rule = /^\w+@(\w+\.\w+)+$/;
+		if(!rule.test(email.value)){
+			emailError.innerHTML = "email is error!";	
+			flag = 1;
+		}	
+	}
+	//实现回车切换TAB键的效果
+	function enterKey(){
+		if(event.srcElement.type != "button"){
+			if(event.keyCode == 13){
+				event.keyCode = 9;
+			}
+		}
+		else{
+			validate();
+		}
+	}
+	//判断年月日
+	function validate_birth(){
+		init();
+		var y = year.value;
+		var m = month.value;
+		var d = day.value;
+		if(y == "" && m == "" && d == ""){}
+		else if(!(y == parseInt(y) && m == parseInt(m) && d == parseInt(d))){
+			alert("请填写正确的出生日期！");
+			flag = 1;
+		}	
+		else{
+			var result = Calender(parseInt(y),parseInt(m),parseInt(d));
+			if(result == false){
+				alert("请填写正确的出生日期！");
+				flag = 1;	
+			}
+		}
+	}
+	//判断日期的合法性
+	function Calender(year,month,day){
+		if(year > 2014 || year < 1900 || month < 1 || month > 12 || day < 1 ||day > 31){
+			return false;	
+		}	
+		else{
+			if(day > daysInMonth(year,month)){
+				return false;	
+			}	
+		}
+		return true;
+	}
+	
+	function daysInMonth(year,month){
+		var days = 0;
+		switch(month){
+		case 4:
+		case 6:
+		case 9:
+		case 11:
+			days = 30;
+			break;
+		case 2:
+			if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0){
+				days = 29;
+			}
+			else{
+				days = 28;
+			}
+			break;
+		default:
+			days = 31;	
+		}
+		return days;
+	}
+	
+	//提交
+	function validate(){
+		if(flag == 0){
+			return true;
+		}
+		else{
+			return false;	
+		}
+	}
+	
+	
+</script>
+</html>

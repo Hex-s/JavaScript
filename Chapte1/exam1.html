@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<script>
+/*for(var i = 0; i < 5; i++){
+	document.write("<table border='1' width=100 height=50 ><tr><td>"+(i+1)+"</td></tr></table>");	
+}*/
+
+//定义变量
+//字符串类型的值
+//var n = "name";
+//var n = 'name';
+//var taglib = "<font color='red'></font>";
+//数值类型的值
+//var n = 10.5555;
+//boolean类型的值
+//var n = true;
+//对象类型的值
+//var n = new Object();
+//var n = new Array("a","b","c");
+
+//变量声明可以不写var
+//n = "tom";
+
+//打印显示
+//alert(n);
+//alert(typeof(n));
+
+</script>
+<body>
+
+<script>
+//页面中可以同时声明多个script标签，且多个script标签中的脚本访问范围互通
+//alert(n);
+
+//循环结构
+//for(var i = 1; i <= 10; i++){
+//	if(i == 5){
+//		continue;
+//	}
+//	alert(i);
+//}
+
+//弹出输入对话框,第一个参数表示输入对话框的提示信息，第二个参数表示输入框内的默认值
+//var str = prompt("请输入内容","默认数据");
+//alert(str);
+//在页面中编写内容
+//document.write("<hr>");
+//通过输入对话框输入菱形的长度，打印输出空心菱形
+
+var n = 7;
+//如果将number和其他类型计算，被计算的其他类型如果能自动转换成number类型则会计算结果，否则返回NaN(not a number)
+alert(n*"a");
+
+//字符串转换成number
+//var str = "19px";
+//转换成整数，所有小数精度丢失（可以将数值型字符串后的非数值内容过滤）
+//alert(parseInt(str));
+//转换成小数
+//alert(parseFloat(str));
+
+
+/*var row;
+do{
+	row = prompt("请输入菱形的边长","3");
+}while(row%2 == 0 || row < 3);
+//计算上半部分行数
+var top = row/2+1;
+//计算下半部分行数
+var bottom = row/2;
+for(var i = 1; i <= top; i++){
+	//打印空格
+	for(var j = 1; j <= top-i; j++){
+		document.write("&nbsp;&nbsp;");
+	}	
+	//打印*
+	for(var k = 1; k <= 2*i-1; k++){
+		if(k == 1 || k == 2*i-1){
+			document.write("*");	
+		}
+		else{
+			document.write("&nbsp;&nbsp;");	
+		}
+	}
+	//换行
+	document.write("<br>");
+}
+for(var i = 1; i <= bottom; i++){
+	//打印空格
+	for(var j = 1; j <= i; j++){
+		document.write("&nbsp;&nbsp;");
+	}	
+	for(var k = 1; k <= row-2*i; k++){
+		if(k == 1 || k == row-2*i){
+			document.write("*");	
+		}
+		else{
+			document.write("&nbsp;&nbsp;");	
+		}
+	}
+	document.write("<br>");
+}*/
+
+
+</script>
+</body>
+</html>
+
+

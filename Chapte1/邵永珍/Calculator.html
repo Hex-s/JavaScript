@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<style type="text/css">
+.button{
+	height:30px;
+	width:52px;
+}
+</style>
+<body>
+<img src="images/logo.gif" />
+<div style="background-color:#BFC; width:250px; height:230px;margin-top:10px;">
+	<img src="images/shop.gif"><font size="+1"><b>购物简易计算器</b></font><br>
+	第一个数<input type="text" id="num1" style="margin-top:15px"/><br>
+    第二个数<input type="text" id="num2"/><br>
+    <input type="button" id="add" value="+" class="button" onclick="calculator(id)"/>
+    <input type="button" id="minus" value="-" class="button" onclick="calculator(id)"/>
+    <input type="button" id="multi" value="x" class="button" onclick="calculator(id)"/>
+    <input type="button" id="sub" value="/" class="button" onclick="calculator(id)"/><br>
+    计算结果<input type="text" id="result"/>
+</div>
+</body>
+<script>
+	//计算
+	function calculator(opt){
+		document.getElementById("result").value = "";
+		var result = 0;
+		//获取两个数
+		var num1 = document.getElementById("num1").value;
+		var num2 = document.getElementById("num2").value;
+		//转化成number`
+		var n1 = parseFloat(num1);
+		var n2 = parseFloat(num2);
+		
+		//判断输入的数是否是数值类型
+		if(num1 != n1 || num2 != n2){
+			alert("请输入数值类型的数！");
+			return;
+		}
+		//进行计算
+		//加法
+		if(opt == "add"){
+			result = n1 + n2;
+		}
+		//减法
+		else if(opt == "minus"){
+			result = n1 - n2;
+		}
+		//乘法
+		else if(opt == "multi"){
+			result = n1 * n2;
+		}
+		//除法
+		else{
+			//判断除数是否为0
+			if(n2 == 0){
+				alert("除数不能为0！");
+				return;
+			}
+			else{
+				result = n1 / n2;
+			}
+		}
+		//显示计算结果
+		document.getElementById("result").value = result.toFixed(2);
+	}
+</script>
+</html>

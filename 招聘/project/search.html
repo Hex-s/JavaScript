@@ -1,0 +1,502 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>人才招聘--搜索</title>
+</head>
+<link href="css.css" type="text/css" rel="stylesheet" />
+<body style="font-size:12px;">
+<!--总体-->
+<div style="width:965px;margin:0px auto;color:#414141;">
+	<!--前程无忧图片-start-->	
+	<div style=" width:143px; height:60px; float:left; margin-left:15px;"><img src="image/logo.gif" /></div>
+    <!--前程无忧图片-end-->
+    <!--My51job……-start-->		
+	 <div id="index_menu" style="width:300px; height:31px;">
+        <div><a href="login.html" style="background-image:url(image/menu1-2.gif); display:block; height:31px; width:96px;"></a></div>
+         <div><a href="search.html" style="background-image:url(image/menu2-1.gif); display:block; height:31px; width:96px;"></a></div>
+         <div><a href="intro.html" style="background-image:url(image/menu3-2.gif); display:block; height:31px; width:96px;"></a></div>
+  </div>
+    <!--My51job……-end-->	
+    <!--位置栏……-start-->	
+    <div class="menu">高级搜索 | 关键字搜索 </div>
+    <!--位置栏……-end-->
+   	<!--主题部分 -start-->
+    <div style="width:965px;text-align:center;">
+    <div style="width:660px; text-align:left;">
+     	<div style=" width:660px; height:28px;" id="picTop"><img src="image/search_top.gif" /></div>
+    	<div style=" width:660px;">
+        	<div style="background-image:url(image/register-line.gif); width:3px; height:290px;float:left;" id="mainLeft"></div>
+            <div style="width:654px; float:left;" id="mainBody">
+            <form action="#" method="post">
+            	<!--关键字搜索 -start-->
+            	<div style="text-align:left; width:200px; padding-left:40px; padding-top:20px;"><img src="image/register-arrow.gif" /><span class="search_title">&nbsp;&nbsp;关键字搜索</span></div>
+            	<!--关键字搜索 -end-->
+                <!--搜索栏 -start-->
+                <div style="margin-top:10px;">
+                	<div  style="width:400px; padding-left:60px; float:left; margin-top:2px;">
+                    <input type="text" id="searchContain" size="60" style="background-image:url(image/key_search.gif); background-repeat:no-repeat; padding-left:20px;"/>
+                    </div>
+                    <div id="workLoc" style="background-image:url(image/search-1.gif); background-repeat:no-repeat; width:78px; height:27px;float:left; line-height:27px; padding-left:3px; margin-left:20px; cursor:hand; text-align:center;">工作地点</div>
+                </div>
+                 <!--搜索栏 -end-->
+                 <!--更多精确搜索条件 -start-->
+            	<div style="text-align:left; width:200px; padding-left:40px; padding-top:20px;"><img src="image/register-arrow.gif" /><span class="search_title">&nbsp;&nbsp;更多精确搜索条件</span></div>
+                <div style="margin-top:10px;">
+                	<!---职能类别  -start-->
+                	<div style=" width:42%;float:left; margin-left:30px;">
+                    	<div class="search_choice">职能类别</div>
+                        <div style="float:left;">
+                        	<div><img src="image/search-choice.gif" id="jobType" style="cursor:hand;"/></div>
+                            <div id="jobTypeSel"></div>
+                        </div>
+                    </div>
+                    <!---职能类别  -end-->
+                    <!---行业类别  -start-->
+                    <div style=" width:42%;float:left; margin-left:30px;">
+                    	<div class="search_choice">行业类别</div>
+                        <div style="float:left;">
+                        	<div><img src="image/search-choice.gif" id="hangType" style="cursor:hand;"/></div>
+                            <div id="hangTypeSel"></div>
+                        </div>
+                    </div>
+                     <!---行业类别  -end-->
+                     <div style="clear:both"></div>
+                     <!--下拉列表-->
+                     <div style="margin-left:50px; display:display;" id="list">
+                     	<table border="0" width="90%">
+                        	<tr>
+                            	<td>发布日期</td>
+                                <td>
+                                	<select id="issuedate" class="search_select">
+										<option value="0">--请选择--</option>
+										<option value="近一天">近一天</option>
+                                        <option value="近二天">近二天</option>
+                                        <option value="近三天">近三天</option>
+                                        <option value="近一周">近一周</option>
+                                        <option value="近两周">近两周</option>
+                                        <option value="近一月">近一月</option>
+                                        <option value="近六周">近六周</option>
+                                        <option value="近两月">近两月</option>
+									</select>
+                                </td>
+                                <td>工作年限</td>
+                                <td>
+                                    <select id="workyear" class="search_select">
+                                        <option value='0'>--请选择--</option>
+                                        <option value='在读学生'>在读学生</option>
+                                        <option value='应届毕业生'>应届毕业生</option>
+                                        <option value='一年以上'>一年以上</option>
+                                        <option value='二年以上'>二年以上</option>
+                                        <option value='三年以上'>三年以上</option>
+                                        <option value='五年以上'>五年以上</option>
+                                        <option value='八年以上'>八年以上</option>
+                                        <option value='十年以上'>十年以上</option>
+									</select>
+                                </td>
+                                <td>月薪范围</td>
+                                <td>
+                                <select id="salary" class="search_select">
+                                    <option value=''>--请选择--</option>
+                                    <option value='面议'>面议</option>
+                                    <option value='1500以下'>1500以下</option>
+                                    <option value='1500-1999'>1500-1999</option>
+                                    <option value='2000-2999'>2000-2999</option>
+                                    <option value='3000-4499'>3000-4499</option>
+                                    <option value='4500-5999'>4500-5999</option>
+                                    <option value='6000-7999'>6000-7999</option>
+                                    <option value='8000-9999'>8000-9999</option>
+                                    <option value='10000-14999'>10000-14999</option>
+                                    <option value='15000-19999'>15000-19999</option>
+                                    <option value='20000-29999'>20000-29999</option>
+                                    <option value='30000-49999'>30000-49999</option>
+                                    <option value='50000及以上'>50000及以上</option>
+								</select>
+                              </td>
+                            </tr>
+                            <tr>
+                            	<td>公司性质</td>
+                                <td>
+                                <select id="cotype"  class="search_select">
+                                    <option value='0'>--请选择--</option>
+                                    <option value='外资(欧美)'>外资(欧美)</option>
+                                    <option value='外资(非欧美)'>外资(非欧美)</option>
+                                    <option value='合资(欧美)'>合资(欧美)</option>
+                                    <option value='合资(非欧美)'>合资(非欧美)</option>
+                                    <option value='国企/上市公司'>国企/上市公司</option>
+                                    <option value='民营/私营公司'>民营/私营公司</option>
+                                    <option value='外企代表处'>外企代表处</option>
+                                    <option value='其它性质'>其它性质</option>
+								</select>
+                                </td>
+                                <td>学历要求</td>
+                                <td>
+                                <select id="xueli" class="search_select">
+                                    <option value='0'>--请选择--</option>
+                                    <option value='无'>无</option>
+                                    <option value='初中'>初中</option>
+                                    <option value='高中'>高中</option>
+                                    <option value='中技'>中技</option>
+                                    <option value='中专'>中专</option>
+                                    <option value='大专'>大专</option>
+                                    <option value='本科'>本科</option>
+                                    <option value='硕士'>硕士</option>
+                                    <option value='博士'>博士</option>
+                                    <option value='其他'>其他</option>
+                                    <option value='不限'>不限</option>
+								</select>
+                                
+                                </td>
+                                <td>工作类型</td>
+                                <td>
+                                <select id="jobterm"  class="search_select">
+                                    <option value='0'>--请选择--</option>
+                                    <option value='全职'>全职</option>
+                                    <option value='兼职'>兼职</option>
+								</select>
+                                </td>
+                            </tr>
+                        </table>
+                     </div>	
+                     <!--下拉列表-->
+                     <div style="margin-left:250px; margin-top:15px;"><input type="button" style="background-image:url(image/search-job.gif); height:30px; width:132px; border:0px; cursor:hand;" id="searchBtn" /></div>
+                </div>
+            	<!--更多精确搜索条件 -end-->
+                 </form>
+            </div>
+            <div style="background-image:url(image/register-line.gif); width:3px; background-repeat:repeat-y;height:290px;float:left;" id="mainRight"></div>
+        </div>
+        <div style="width:600px; height:18px;" id="picButtom"> <img src="image/search_bottom.gif" /></div>
+    </div>
+    
+	<!--工作地点 -start-->
+    <div style=" position:absolute; width:600px; height:160px; top:230px; left:200px; background-color:#FFFFF7; display:none;" id="workplace">
+    	<div style="background-image:url(image/bottom-bg.gif); background-repeat:repeat-x; height:35px; color:#FFF; line-height:35px; text-align:left; font-size:13px;">
+        	<div style="float:left; width:150px; padding-left:10px; padding-top:5px;"><img src="image/orangearrow.gif" />&nbsp;&nbsp;请选择工作地点</div>
+        	<div style="cursor:hand; float:right; width:60px; margin-top:-3px;" id="closeWorkplace">&nbsp;[&nbsp;关&nbsp;闭&nbsp;]&nbsp;</div>
+        </div>
+        <!--地点-start-->
+        <div style=" margin-top:-3px;">
+        <table width="100%" height="100" border="0" cellspacing="0" cellpadding="0" id="workLocSel" style="border-bottom:#FF7000 2px solid;">
+  <tr align="center">
+    <td><a href="javascript:show('北京市')">北京市</a></td>
+    <td><a href="javascript:show('上海市')">上海市</a></td>
+    <td><a href="javascript:show('广东省')">广东省</a></td>
+    <td><a href="javascript:show('深圳市')">深圳市</a></td>
+    <td><a href="javascript:show('天津市')">天津市</a></td>
+    <td><a href="javascript:show('重庆市')">重庆市</a></td>
+  </tr>
+  <tr align="center">
+    <td><a href="javascript:show('江苏省')">江苏省</a></td>
+    <td><a href="javascript:show('浙江省')">浙江省</a></td>
+    <td><a href="javascript:show('四川省')">四川省</a></td>
+    <td><a href="javascript:show('海南省')">海南省</a></td>
+    <td><a href="javascript:show('福建省')">福建省</a></td>
+    <td><a href="javascript:show('山东省')">山东省</a></td>
+  </tr>
+  <tr align="center">
+    <td><a href="javascript:show(江西省'')">江西省</a></td>
+    <td><a href="javascript:show('广西')">广西</a></td>
+    <td><a href="javascript:show('安徽省')">安徽省</a></td>
+    <td><a href="javascript:show('河北省')">河北省</a></td>
+    <td><a href="javascript:show('河南省')">河南省</a></td>
+    <td><a href="javascript:show('湖北省')">湖北省</a></td>
+  </tr>
+  <tr align="center">
+    <td><a href="javascript:show('湖南省')">湖南省</a></td>
+    <td><a href="javascript:show('陕西省')">陕西省</a></td>
+    <td><a href="javascript:show('山西省')">山西省</a></td>
+    <td><a href="javascript:show('黑龙江省')">黑龙江省</a></td>
+    <td><a href="javascript:show('辽宁省')">辽宁省</a></td>
+    <td><a href="javascript:show('吉林省')">吉林省</a></td>
+  </tr>
+  <tr align="center">
+    <td><a href="javascript:show('云南省')">云南省</a></td>
+    <td><a href="javascript:show('贵州省')">贵州省</a></td>
+    <td><a href="javascript:show('甘肃省')">甘肃省</a></td>
+    <td><a href="javascript:show('内蒙古')">内蒙古</a></td>
+    <td><a href="javascript:show('宁夏')">宁夏</a></td>
+    <td><a href="javascript:show('西藏')">西藏</a></td>
+  </tr>
+  <tr align="center">
+    <td><a href="javascript:show('新疆')">新疆</a></td>
+    <td><a href="javascript:show('青海省')">青海省</a></td>
+    <td><a href="javascript:show('香港')">香港</a></td>
+    <td><a href="javascript:show('澳门')">澳门</a></td>
+    <td><a href="javascript:show('台湾')">台湾</a></td>
+    <td><a href="javascript:show('国外')">国外</a></td>
+  </tr>
+</table>
+        </div>
+        <!--地点-end-->
+    </div>
+     <!--工作地点 -end-->
+     
+     <!--职能类别 -start-->
+      <div style=" position:absolute; width:680px; height:160px; top:300px; left:150px; background-color:#FFFFF7; display:none;" id="allJobType">
+    	<div style="background-image:url(image/bottom-bg.gif); background-repeat:repeat-x; height:35px; color:#FFF; line-height:35px; text-align:left; font-size:13px;">
+        	<div style="float:left; width:150px; padding-left:10px; padding-top:5px;"><img src="image/orangearrow.gif" />&nbsp;&nbsp;请选择您想搜索的职位</div>
+        	<div style="float:right; width:60px; margin-top:-3px;" id="closeWorkplace"><span id="confirmJob" style="cursor:hand;">&nbsp;[&nbsp;确&nbsp;认&nbsp;]</span>&nbsp;&nbsp;<span id="closeJob" style="cursor:hand;">[&nbsp;关&nbsp;闭&nbsp;]&nbsp;</span></div>
+        </div>
+        <!--职能-start-->
+        <div style=" margin-top:-3px;">
+       <table width="98%" border="0" cellspacing="0" cellpadding="0" style="border-bottom:#FF7000 2px solid;">
+<form method="post" name="tform">
+  <tr align="left">
+    <td height="25"><input name="tbox" type="checkbox" value="IT开发及应用">IT开发及应用</td>
+    <td><input name="tbox" type="checkbox" value="it管理">it管理</td>
+    <td><input name="tbox" type="checkbox" value="销售管理">销售管理</td>
+    <td><input name="tbox" type="checkbox" value="销售人员">销售人员</td>
+    <td><input name="tbox" type="checkbox" value="银行">银行</td>
+  </tr>
+  <tr align="left">
+     <td height="25">
+     <input name="tbox" type="checkbox" value="广告/媒介">广告/媒介</td>
+    <td><input name="tbox" type="checkbox" value="写作/出版/印刷">写作/出版/印刷</td>
+    <td><input name="tbox" type="checkbox" value="生产/营运">生产/营运</td>
+    <td><input name="tbox" type="checkbox" value="服装/纺织/皮革">服装/纺织/皮革</td>
+  <td><input name="tbox" type="checkbox" value="交通动输服务">交通动输服务</td>
+  </tr>
+  <tr align="left">
+     <td height="25"><input name="tbox" type="checkbox" value="市场/营销">市场/营销</td>
+    <td><input name="tbox" type="checkbox" value="房地产">房地产</td>
+    <td><input name="tbox" type="checkbox" value="医院/医疗/护理">医院/医疗/护理</td>
+    <td><input name="tbox" type="checkbox" value="财务/审计/税务">财务/审计/税务</td>
+  <td><input name="tbox" type="checkbox" value="公务员">公务员</td>
+  </tr>
+  <tr align="left">
+     <td height="25"><input name="tbox" type="checkbox" value="物业管理">物业管理</td>
+    <td><input name="tbox" type="checkbox" value="人力资源">人力资源</td>
+    <td><input name="tbox" type="checkbox" value="科研人员">科研人员</td>
+    <td><input name="tbox" type="checkbox" value="教师">教师</td>
+  <td><input name="tbox" type="checkbox" value="餐饮/娱乐">餐饮/娱乐</td>
+  </tr>
+  <tr align="left">
+    <td height="25"><input name="tbox" type="checkbox" value="行政/后勤">行政/后勤</td>
+    <td><input name="tbox" type="checkbox" value="美容/健身务">美容/健身</td>
+    <td><input name="tbox" type="checkbox" value="在校学生">在校学生</td>
+    <td><input name="tbox" type="checkbox" value="兼职">兼职</td>
+  <td><input name="tbox" type="checkbox" value="其他">其他</td>
+  </tr>
+  </form>
+</table>
+        </div>
+        <!--职能-end-->
+    </div>
+     <!--职能类别 -end-->
+     
+      <!--行业类别 -start-->
+      <div style=" position:absolute; width:680px; height:160px; top:300px; left:150px; background-color:#FFFFF7; display:none;" id="allHangType">
+    	<div style="background-image:url(image/bottom-bg.gif); background-repeat:repeat-x; height:35px; color:#FFF; line-height:35px; text-align:left; font-size:13px;">
+        	<div style="float:left; width:150px; padding-left:10px; padding-top:5px;"><img src="image/orangearrow.gif" />&nbsp;&nbsp;请选择您想搜索的行业</div>
+        	<div style="float:right; width:60px; margin-top:-3px;" id="closeWorkplace"><span id="confirmHang" style="cursor:hand;">&nbsp;[&nbsp;确&nbsp;认&nbsp;]</span>&nbsp;&nbsp;<span id="closeHang" style="cursor:hand;">[&nbsp;关&nbsp;闭&nbsp;]&nbsp;</span></div>
+        </div>
+        <!--行业-start-->
+        <div style=" margin-top:-3px;">
+   			<table width="98%" border="0" cellspacing="0" cellpadding="0" style="border-bottom:#FF7000 2px solid;">
+<form  method="post" name="jform">
+  <tr align="left">
+    <td height="25"><input name="jbox" type="checkbox" value="计算机软件">计算机软件</td>
+    <td><input name="jbox" type="checkbox" value="计算机硬件">计算机硬件</td>
+    <td><input name="jbox" type="checkbox" value="计算机服务">计算机服务</td>
+    <td><input name="jbox" type="checkbox" value="通信/电信/网络设备">通信/电信/网络设备</td>
+    <td><input name="jbox" type="checkbox" value="互联网/电子商务">互联网/电子商务</td>
+  </tr>
+  <tr align="left">
+     <td height="25"><input name="jbox" type="checkbox" value="网络游戏">网络游戏</td>
+    <td><input name="jbox" type="checkbox" value="会计/审计">会计/审计</td>
+    <td><input name="jbox" type="checkbox" value="金融/投资/证券">金融/投资/证券</td>
+    <td><input name="jbox" type="checkbox" value="银行">银行</td>
+  <td><input  name="jbox" type="checkbox" value="批发/零售">批发/零售</td>
+  </tr>
+  <tr align="left">
+     <td height="25"><input name="jbox" type="checkbox" value="贸易/进出口">贸易/进出口</td>
+    <td><input name="jbox" type="checkbox" value="保险">保险</td>
+    <td><input name="jbox" type="checkbox" value="办公用品及设备">办公用品及设备</td>
+    <td><input name="jbox" type="checkbox" value="快速消费品">快速消费品</td>
+  <td><input name="jbox" type="checkbox" value="机械/设备/重工">机械/设备/重工</td>
+  </tr>
+  <tr align="left">
+     <td height="25"><input name="jbox" type="checkbox" value="教育/培训">教育/培训</td>
+    <td><input name="jbox" type="checkbox" value="学术/科研">学术/科研</td>
+    <td><input name="jbox" type="checkbox" value="科研人员">科研人员</td>
+    <td><input name="jbox" type="checkbox" value="检测/认证">检测/认证</td>
+  <td><input name="jbox" type="checkbox" value="餐饮/娱乐">餐饮/娱乐</td>
+  </tr>
+  <tr align="left">
+    <td height="25"><input name="jbox" type="checkbox" value="酒店/旅游">酒店/旅游</td>
+    <td><input name="jbox" type="checkbox" value="生活服务">生活服务</td>
+    <td><input name="jbox" type="checkbox" value="美容/保健">美容/保健</td>
+    <td><input name="jbox" type="checkbox" value="航天/航空">航天/航空</td>
+  <td><input name="jbox" type="checkbox" value="石油/化工/矿产">石油/化工/矿产</td>
+  </tr>
+  <tr align="left">
+    <td height="25"><input name="jbox" type="checkbox" value="采掘业/冶炼">采掘业/冶炼</td>
+    <td><input name="jbox" type="checkbox" value="电力/水利">电力/水利</td>
+    <td><input name="jbox" type="checkbox" value="原材料和加工">原材料和加工</td>
+    <td><input name="jbox" type="checkbox" value="政府">政府</td>
+  <td><input name="jbox" type="checkbox" value="非盈利机构">非盈利机构</td>
+  </tr>
+  <tr align="left">
+    <td height="25"><input name="jbox" type="checkbox" value="环保">环保</td>
+    <td><input name="jbox" type="checkbox" value="农业/渔业/林业">农业/渔业/林业</td>
+    <td><input name="jbox" type="checkbox" value="多元化业务集团">多元化业务集团</td>
+    <td><input name="jbox" type="checkbox" value="法律">法律</td>
+  <td><input name="jbox" type="checkbox" value="其他行业">其他行业</td>
+  </tr>
+  </form>
+</table>
+        </div>
+        <!--行业-end-->
+    </div>
+     <!--行业类别 -end-->
+     
+    </div>	
+    <!--主题部分 -end-->
+    <!--尾部导航 -start-->
+    <div class="menu" id="bg_menu">
+    	网站导航 | <a href="index.html">网站首页</a> | <a href="search.html">职位搜索</a> | <a href="login.html">Myjob</a> | <a href="register.html">用户注册</a> | <a href="login.html">用户登录</a> | <a href="intro.html">简历管理</a> | <a href="company.html" >招聘公司</a>
+    </div>
+    <!--尾部导航 -end-->
+    <!--尾部信息 -start-->
+    <div style="text-align:center; color:#333; width:965px; height:150px; line-height:25px; letter-spacing:1px;">
+    人才招聘 Email:hr@51job.com<br />个人求职 Email:club@51job.com　或垂询:800-820-5100<br /> 未经本招聘网站同意，不得转载本网站之所有招聘信息及作品<br />无忧工作网版权所有©1999-2007<br />
+ <a href="http://www.miibeian.gov.cn" target="_blank"><img src="image/bottom1.gif" border="0"/></a>
+    </div>
+    <!--尾部信息 -end--> 
+</div>    
+<!--总体结束-->
+ 
+</body>
+<script src="javascrip.js"></script>
+<script>
+var myJob = document.getElementById("myJob");
+var jobSearch = document.getElementById("jobSearch");
+var resumeMag = document.getElementById("resumeMag");
+var workLoc = document.getElementById("workLoc");
+var list = document.getElementById("list");
+var workplace = document.getElementById("workplace");
+var closeWorkplace = document.getElementById("closeWorkplace");
+
+var jobType = document.getElementById("jobType");
+var allJobType = document.getElementById("allJobType");
+var jobTypeSel = document.getElementById("jobTypeSel");
+var confirmJob = document.getElementById("confirmJob");
+var closeJob = document.getElementById("closeJob");
+var jobs = document.getElementsByName("tbox");
+
+var hangType = document.getElementById("hangType");
+var allHangType = document.getElementById("allHangType");
+var hangTypeSel = document.getElementById("hangTypeSel");
+var confirmHang = document.getElementById("confirmHang");
+var closeHang = document.getElementById("closeHang");
+var hangs = document.getElementsByName("jbox");
+
+var mainLeft = document.getElementById("mainLeft");
+var mainRight = document.getElementById("mainRight");
+
+
+var numj = 0;
+var numh = 0;
+
+//确认并显示职业
+confirmHang.onclick = function(){
+	hangTypeSel.innerHTML = "";
+	var str = "";
+	numh = 0;
+	//写入职业
+	for(var i = 0; i < hangs.length; i++){
+		if(hangs[i].checked){
+			numh++;
+			str += hangs[i].value+"<br>";
+		}	
+	}
+	hangTypeSel.innerHTML = str;
+	allHangType.style.display = "none";
+	list.style.display = "block";
+	var num;
+	if(numj >= numh){
+		num = numj;
+	}
+	else{
+		num = numh;
+	}
+	var height = 290 + 15*num;
+	mainLeft.style.height = height;
+	mainRight.style.height = height;
+}
+
+//关闭行业
+closeHang.onclick = function(){
+	allHangType.style.display = "none";
+	list.style.display = "block";
+}
+//行业
+hangType.onclick = function(){
+	list.style.display = "none";
+	workplace.style.display = "none";
+	allJobType.style.display = "none";	
+	allHangType.style.display = "block";	
+}
+
+//确认并显示职业
+confirmJob.onclick = function(){
+	jobTypeSel.innerHTML = "";
+	var str = "";
+	numj = 0;
+	//写入职业
+	for(var i = 0; i < jobs.length; i++){
+		if(jobs[i].checked){
+			numj++;
+			str += jobs[i].value+"<br>";
+		}	
+	}
+	jobTypeSel.innerHTML = str;
+	allJobType.style.display = "none";
+	list.style.display = "block";
+	var num;
+	if(numj >= numh){
+		num = numj;
+	}
+	else{
+		num = numh;
+	}
+	var height = 290 + 15*num;
+	mainLeft.style.height = height;
+	mainRight.style.height = height;
+}
+//关闭职业
+closeJob.onclick = function(){
+	allJobType.style.display = "none";
+	list.style.display = "block";	
+}
+
+//职能类别
+jobType.onclick = function(){
+	list.style.display = "none";
+	workplace.style.display = "none";
+	allJobType.style.display = "block";	
+	allHangType.style.display = "none";
+}
+
+//工作地点
+workLoc.onclick = function(){
+	list.style.display = "none";
+	workplace.style.display = "block";
+	allJobType.style.display = "none";	
+	allHangType.style.display = "none";
+}
+//选择工作地点
+function show(loc){
+	workLoc.innerHTML = loc+"";
+}
+//关闭工作地点
+closeWorkplace.onclick = function(){
+	workplace.style.display = "none";
+	list.style.display = "block";		
+}
+
+
+
+</script>
+</html>

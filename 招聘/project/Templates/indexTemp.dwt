@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>无标题文档</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+</head>
+<link href="../css.css" type="text/css" rel="stylesheet" />
+<body>
+<!--总体-->
+<div style="width:965px;margin:0px auto;">
+	<!--前程无忧图片-start-->	
+	<div style=" width:143px; height:60px; float:left; margin-left:15px;"><img src="../image/logo.gif" /></div>
+    <!--前程无忧图片-end-->
+    <!--My51job……-start-->		
+	<div id="index_menu" style="width:300px; height:31px;">
+    	<div id="myJob" style="background-image:url(image/menu1-2.gif)"></div>
+        <div id="jobSearch" style="background-image:url(image/menu2-2.gif)"></div>
+        <div id="resumeMag" style="background-image:url(image/menu2-2.gif)"></div>
+    </div>
+    <!--My51job……-end-->	
+    <!--位置栏……-start-->	
+    <div class="menu"><!-- TemplateBeginEditable name="EditRegion4" -->EditRegion4<!-- TemplateEndEditable --></div>
+    <!--位置栏……-end-->
+   	<!--主题部分 -start-->
+    <div style="width:965px;"><!-- TemplateBeginEditable name="EditRegion3" -->EditRegion3<!-- TemplateEndEditable --></div>	
+    <!--主题部分 -end-->
+    <!--尾部导航 -start-->
+    <div class="menu" id="bg_menu">
+    	网站导航 | <a href="../index.html">网站首页</a> | <a href="../search.html">职位搜索</a> | <a href="../login.html">Myjob</a> | <a href="../register.html">用户注册</a> | <a href="../login.html">用户登录</a> | <a href="../intro.html">简历管理</a> | <a href="../company.html" >招聘公司</a>
+    </div>
+    <!--尾部导航 -end-->
+    <!--尾部信息 -start-->
+    <div style="text-align:center; color:#333; width:965px; height:150px; line-height:25px; letter-spacing:1px;">
+    人才招聘 Email:hr@51job.com<br />个人求职 Email:club@51job.com　或垂询:800-820-5100<br /> 未经本招聘网站同意，不得转载本网站之所有招聘信息及作品<br />无忧工作网版权所有©1999-2007<br />
+ <a href="http://www.miibeian.gov.cn" target="_blank"><img src="../image/bottom1.gif" border="0"/></a>
+    </div>
+    <!--尾部信息 -end--> 
+</div>    
+<!--总体结束-->
+ 
+</body>
+<script>
+var myJob = document.getElementById("myJob");
+var jobSearch = document.getElementById("jobSearch");
+var resumeMag = document.getElementById("resumeMag");
+
+myJob.onclick = function(){
+	myJob.style.backgroundImage = "url(image/menu1-1.gif)";	
+	jobSearch.style.backgroundImage = "url(image/menu2-2.gif)";
+	resumeMag.style.backgroundImage = "url(image/menu3-2.gif)";	
+	window.open("login.html","_self","");
+}
+
+jobSearch.onclick = function(){
+	jobSearch.style.backgroundImage = "url(image/menu2-1.gif)";	
+	myJob.style.backgroundImage = "url(image/menu1-2.gif)";	
+	resumeMag.style.backgroundImage = "url(image/menu3-2.gif)";	
+	window.open("search.html","_self","");
+}
+
+resumeMag.onclick = function(){
+	resumeMag.style.backgroundImage = "url(image/menu3-1.gif)";	
+	jobSearch.style.backgroundImage = "url(image/menu2-2.gif)";	
+	myJob.style.backgroundImage = "url(image/menu1-2.gif)";	
+	window.open("intro.html","_self","");
+}
+</script>
+</html>

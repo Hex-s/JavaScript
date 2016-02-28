@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<style>
+#ad div{width:20px; height:20px; background-color:#336; color:white; font-weight:bold; text-align:center; line-height:20px; font-size:12px; float:left; position:relative; left:280px; top:170px; cursor:hand}
+</style>
+<body>
+<div id="ad" style="background-image:url(image/ad-01.jpg); width:360px; height:190px;">
+	<div>1</div>
+	<div>2</div>
+    <div>3</div>
+    <div>4</div>
+</div>
+<script>
+var ad = document.getElementById("ad");
+//图片的索引
+var index = 0;
+function changeImage(){
+	//累加图片的索引
+	index++;
+	//判断是否是最后张图片
+	if(index > 4){
+		index = 1;	
+	}
+	ad.style.backgroundImage = "url(image/ad-0"+index+".jpg)";
+	window.setTimeout("changeImage()",1000);
+}
+changeImage();
+</script>
+</body>
+</html>

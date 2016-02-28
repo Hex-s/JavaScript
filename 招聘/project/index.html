@@ -1,0 +1,453 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>我的招聘网</title>
+</head>
+<link href="css.css" type="text/css" rel="stylesheet" />
+<body class="index_body">
+<!--总体-->
+<div style="width:965px;margin:0px auto;"> 
+  <!--前程无忧图片-start-->
+  <div style=" width:143px; height:60px; float:left; margin-left:15px;"><img src="image/logo.gif" /></div>
+  <!--前程无忧图片-end--> 
+  <!--My51job……-start-->
+  <div id="index_menu" style="width:300px; height:31px;">
+    <div><a href="login.html" style="background-image:url(image/menu1-2.gif); display:block; height:31px; width:96px;"></a></div>
+     <div><a href="search.html" style="background-image:url(image/menu2-2.gif); display:block; height:31px; width:96px;"></a></div>
+     <div><a href="intro.html" style="background-image:url(image/menu3-2.gif); display:block; height:31px; width:96px;"></a></div>
+  </div>
+  <!--My51job……-end--> 
+  <!--位置栏……-start-->
+  <div class="menu">
+    <div style="float:left; width:300px;height:30px; margin-left:20px; ">个人会员登录 | 会员名： &nbsp;
+      <input id="username" type="text" class="index-input">
+    </div>
+    <div style="float:left; width:160px;height:30px;">密码：&nbsp;
+      <input id="pwd" type="password" class="index-input">
+    </div>
+    <div style="float:left; width:80px; height:30px; line-height:35px; ">
+      <input id="subbmit" type="submit" value="" class="index-btn">
+    </div>
+    <div style="float:left; width:120px; margin-top:3px;">
+      <input id="zddl" type="checkbox" >
+      自动登录</div>
+    <div style="float:left; width:100px; height:30px; line-height:30px;"><a href="register.html" style="color:#FFF; text-decoration:none">新会员注册</a></div>
+  </div>
+  <!--位置栏……-end--> 
+  <!--主题部分 -start-->
+  <div style="width:965px;" id="indexBody"> 
+    <!--广告-start-->
+    <div style="height:200px; margin-top:10px;">
+      <div style="width:187px;float:left; margin-top:10px;"> <a href="company.html"><img src="image/index-2.gif" border="0" /></a> <a href="company.html"><img src="image/index-3.gif" border="0"/></a> <a href="company.html"><img src="image/index-4.gif" border="0" /></a></div>
+      <!--关键字搜索 -start-->
+      <div style="width:216px; height:200px; float:left; margin-left:10px; background-image:url(image/index-bg1.gif)">
+        <div style="line-height:20px; margin-top:60px; margin-left:20px;"> 请输入关键词：<br>
+          <input type="text" id="searchText" />
+          <br />
+          例如：软件工程师<br>
+          或 项目经理 互联网<br />
+          <a href="search.html" id="searchBtn" style="background-image:url(image/search.gif); width:70px; height:30px; border:0px; margin-left:35px; display:block" /></a>
+        </div>
+      </div>
+      <!--关键字搜索 -end--> 
+      <!--滚动广告-start-->
+      <div style="width:350px; height:200px; float:left; text-align:center;margin-left:2px;">
+        <div>欢迎光临招聘网</div>
+        <div id="changePic" style="width:350px; height:155px; background-image:url(image/index-7.gif); cursor:hand;"></div>
+        <div style="margin-top:5px;">·<a href="company.html" class="index_a">深圳高新技术人才专场招聘会</a>&nbsp;&nbsp;&nbsp;&nbsp;·<a href="company.html" class="index_a">近期预告敬请关注</a> </div>
+      </div>
+      <!--滚动广告-end--> 
+      <!--近期预告 -start-->
+      <div style="width:190px; margin-left:2px;border:#FE8D17 1px solid;">
+        <div style="width:190px; height:35px; line-height:35px; color:#FFF; background-image:url(image/bottom-bg.gif)">·近期预告</div>
+        <div style="overflow:hidden;width:190px; height:160px;" id="mar2">
+        	<div style="height:150px;"></div>
+            <div id="mar2_1" style="height:200px;">
+                  <ul id="index_ul">
+                    <li>2007年9月无忧指数IT图解</li>
+                    <li>3G售前技术支持工程师</li>
+                    <li>3G测试工程师</li>
+                    <li>3G软件工程师</li>
+                    <li>3G系统工程师</li>
+                    <li>2007年9月无忧指数IT图解</li>
+                    <li>3G售前技术支持工程师</li>
+                    <li>3G测试工程师</li>
+                    <li>3G软件工程师</li>
+                    <li>3G系统工程师</li>
+                  </ul>
+              </div>
+              <div id="mar2_2"></div>
+        </div>
+      </div>
+      <!--近期预告 -end--> 
+    </div>
+    <!--广告-end--> 
+    <!--品牌公司 横线 -start-->
+    <div style="width:965px; width:26px;"><img src="image/index-1.gif" /></div>
+    <!--品牌公司 横线 -end--> 
+    
+    <!--滚动横幅 -start-->
+    <div style="height:30px;width:965px; overflow:hidden;" id="marque1">
+    	<table cellpadding="0" cellspacing="0">
+        	<tr><td></td></tr>
+			<tr>
+    			<td id="td1" style="white-space:nowrap">
+                	<a href='company.html'>武汉红孩子信息技术有限公司</a>&nbsp;&nbsp;
+                    <a href='company.html'>海南优美内衣有限公司</a>&nbsp;&nbsp;
+                    <a href='company.html'>武汉第三空间建筑装饰设计工程</a>&nbsp;&nbsp;
+                    <a href='company.html'>武汉鑫凌铭泰汽车销售有限公司</a>&nbsp;&nbsp;
+                    <a href='company.html'>武汉晟添华广告有限公司</a>&nbsp;&nbsp;
+                    <a href='company.html'>华艺墙纸布艺市场有限公司</a>&nbsp;&nbsp;
+                    <a href='company.html'>深圳市爱迪星电子科技有限公司武汉</a>&nbsp;&nbsp;
+                    <a href='company.html'>伊莎美尔</a>&nbsp;&nbsp;
+                    <a href='company.html'>武汉美苑广告印务有限公司</a>&nbsp;&nbsp;
+                    <a href='company.html'>卓著装饰</a>&nbsp;&nbsp;
+                    <a href='company.html'>武汉市捷强智能门控工程有限公司</a>&nbsp;&nbsp;
+                    <a href='company.html'>武汉沿极建筑技术有限公司</a>&nbsp;&nbsp;
+                    <a href='company.html'>武汉东云阁酒店管理有限公司</a>&nbsp;&nbsp;
+                    <a href='company.html'>武汉市中创环亚建筑景观设计工程</a>&nbsp;&nbsp;
+                    <a href='company.html'>法国伊丝艾拉内衣</a>&nbsp;&nbsp;
+                    <a href='company.html'>达诚医药</a>&nbsp;&nbsp;
+                    <a href='company.html'>ERUNER湖北分公司</a>&nbsp;&nbsp;
+                    <a href='company.html'>湖北伟业房地产有限公司</a>&nbsp;&nbsp;
+                    <a href='company.html'>华闻期货武昌营业部</a>&nbsp;&nbsp;
+                    <a href='company.html'>武汉华城运输有限公司</a>&nbsp;&nbsp;
+                    <a href='company.html'>武汉百纳装饰工程有限公司</a>&nbsp;&nbsp;
+                    <a href='company.html'>星月门业</a>&nbsp;&nbsp;
+                    <a href='company.html'>四合园酒店</a>&nbsp;&nbsp;
+                    <a href='company.html'>锐色力奥品牌策略机构</a>&nbsp;&nbsp;
+                    <a href='company.html'>武汉凯比亚电池科技有限公司</a>&nbsp;&nbsp;
+                    <a href='company.html'>武汉绍兴老酒饮食有限公司</a>
+                </td>
+        		<td id="td2" style="white-space:nowrap"></td>
+    		</tr>
+		</table>
+    </div>
+    <!--滚动横幅 -end--> 
+    
+    <!--公司广告 -start-->
+    <div style="height:270px; margin-top:5px;">
+      <div style="width:317px; height:27px; float:left;"><a href="company.html"><img src="image/index-ad1.gif" border="0"></a></div>
+      <div class="index_ad"><a href="company.html"><img src="image/index-ad2.gif" border="0"></a></div>
+      <div class="index_ad"><a href="company.html"><img src="image/index-ad4.gif" border="0"></a></div>
+      <div class="index_ad" style="margin-top:5px;"><a href="company.html"><img src="image/index-ad6.gif" border="0"/></a></div>
+      <div class="index_ad" style="margin-top:5px;"><a href="company.html"><img src="image/index-ad5.gif" border="0"/></a></div>
+      <div style="clear:both;"></div>
+      <div style="margin-top:5px; float:left"><a href="company.html"><img src="image/index-ad7.gif" border="0"/></a></div>
+      <div style="margin-top:5px;" class="index_ad"><a href="company.html"><img src="image/index-ad9.gif" border="0"/></a></div>
+      <div style="margin-top:5px;" class="index_ad"><a href="company.html"><img src="image/index-ad11.gif" border="0"/></a></div>
+      <div style="clear:both"></div>
+      <div style="margin-top:5px; float:left"><a href="company.html"><img src="image/index-ad8.gif" border="0"/></a></div>
+      <div style="margin-top:5px;" class="index_ad"><a href="company.html"><img src="image/index-ad10.gif" border="0"/></a></div>
+      <div style="margin-top:5px;" class="index_ad"><a href="company.html"><img src="image/index-ad12.gif" border="0"/></a></div>
+    </div>
+    <!--公司广告 -end--> 
+    <!--最热招聘 -start-->
+    <div style="width:926px;" id="hot">
+      <div style="width:962px; height:25px;"><img src="image/hot_top.gif" /></div>
+      <div style="width:962px;height:400px;">
+      	<div style="background-image:url(image/register-line.gif); width:3px; height:504px; float:left"></div>
+        <div style="width:956px; height:450px; float:left">
+        	<div class="index_hotbg" style="margin-left:15px;"><a href="#hot1">计算机/网络/通信/电子</a></div>
+        	<div class="index_hotbg"><a href="#hot2">贸易/消费/制造/营运</a></div>
+            <div style="clear:both"></div>
+        	<!--计算机/网络/通信/电子 -start-->
+            <div class="index_hottitle" style="padding-top:20px; padding-left:20px;"><img src="image/register-arrow.gif" width="9" height="9"> <a name="hot1">计算机/网络/通信/电子</a></div>
+            <div style="margin-left:20px; font-size:11px;">
+            	<table width="900" height="200">
+                	<tr>
+                    	<td class="index_hottr">·武汉网度信息科技有限公司</td>
+                        <td class="index_hottr">·北京东方中科集成科技有限公司</td>
+                        <td class="index_hottr">·深圳市天音美讯信息技术有限公司</td>
+                        <td class="index_hottr">·武汉天行健科学仪器设备有限公司</td>
+                    </tr>
+                    <tr>
+                    	<td class="index_hottr">·武汉电信系统集成分公司</td>
+                		<td class="index_hottr">·武汉网路万通科技开发有限公司</td>
+                		<td class="index_hottr">·深圳市天音美讯信息技术有限公司</td>
+                		<td class="index_hottr">·武汉理康科技有限公司</td>
+                    </tr>
+                    <tr>
+                    	<td class="index_hottr">·武汉红帽电子娱乐有限公司</td>
+                 		<td class="index_hottr">·武汉盛铭科技有限公司</td>
+                 		<td class="index_hottr">·武汉市一龙电气科技有限公司</td>
+                 		<td class="index_hottr">·武汉天腾通软科技有限公司</td>
+                    </tr>
+                    <tr>
+                    	<td class="index_hottr">·武汉洛比科技有限公司 </td>
+                 		<td class="index_hottr">·武汉百捷网络服务有限公司</td>
+                 		<td class="index_hottr">·江苏新科数字技术公司武汉分公司</td>
+                 		<td class="index_hottr">·武汉市武昌区徐恒电脑服务部</td>
+                    </tr>
+                    <tr>
+                    	<td class="index_hottr">·武汉网度信息科技有限公司 </td>
+                 		<td class="index_hottr">·北京东方中科集成科技有限公司</td>
+                 		<td class="index_hottr">·深圳市天音美讯信息技术有限公司</td>
+                 		<td class="index_hottr">·武汉天行健科学仪器设备有限公司</td>
+                    </tr>
+                    <tr>
+                    	<td class="index_hottr">·武汉电信系统集成分公司 </td>
+                		<td class="index_hottr">·武汉网路万通科技开发有限公司</td>
+                		<td class="index_hottr">·深圳市天音美讯信息技术有限公司</td>
+                		<td class="index_hottr">·武汉理康科技有限公司</td>
+                    </tr>
+                    <tr>
+                    	<td class="index_hottr">·武汉红帽电子娱乐有限公司 </td>
+                 		<td class="index_hottr">·武汉盛铭科技有限公司</td>
+                 		<td class="index_hottr">·武汉市一龙电气科技有限公司</td>
+                 		<td class="index_hottr">·武汉天腾通软科技有限公司</td>
+                    </tr>
+                    <tr>
+                    	<td class="index_hottr">·武汉洛比科技有限公司  </td>
+                 		<td class="index_hottr">·武汉百捷网络服务有限公司</td>
+                 		<td class="index_hottr">·江苏新科数字技术有限公武汉分公司</td>
+                 		<td class="index_hottr">·武汉市武昌区徐恒电脑服务部</td>
+                    </tr>
+                </table>
+            </div>
+            <!--计算机/网络/通信/电子 -end-->
+            <!--贸易/消费/制造/营运--start-->
+            	<div class="index_hottitle" style="padding-top:20px; padding-left:20px;"><img src="image/register-arrow.gif" width="9" height="9"> <a name="hot2">贸易/消费/制造/营运</a></div>
+            <div style="margin-left:20px; font-size:11px;">
+            	<table width="900" height="200">
+                	<tr>
+                    	<td class="index_hottr">·武汉网度信息科技有限公司</td>
+                        <td class="index_hottr">·北京东方中科集成科技有限公司</td>
+                        <td class="index_hottr">·深圳市天音美讯信息技术有限公司</td>
+                        <td class="index_hottr">·武汉天行健科学仪器设备有限公司</td>
+                    </tr>
+                    <tr>
+                    	<td class="index_hottr">·武汉电信系统集成分公司</td>
+                		<td class="index_hottr">·武汉网路万通科技开发有限公司</td>
+                		<td class="index_hottr">·深圳市天音美讯信息技术有限公司</td>
+                		<td class="index_hottr">·武汉理康科技有限公司</td>
+                    </tr>
+                    <tr>
+                    	<td class="index_hottr">·武汉红帽电子娱乐有限公司</td>
+                 		<td class="index_hottr">·武汉盛铭科技有限公司</td>
+                 		<td class="index_hottr">·武汉市一龙电气科技有限公司</td>
+                 		<td class="index_hottr">·武汉天腾通软科技有限公司</td>
+                    </tr>
+                    <tr>
+                    	<td class="index_hottr">·武汉洛比科技有限公司 </td>
+                 		<td class="index_hottr">·武汉百捷网络服务有限公司</td>
+                 		<td class="index_hottr">·江苏新科数字技术公司武汉分公司</td>
+                 		<td class="index_hottr">·武汉市武昌区徐恒电脑服务部</td>
+                    </tr>
+                    <tr>
+                    	<td class="index_hottr">·武汉网度信息科技有限公司 </td>
+                 		<td class="index_hottr">·北京东方中科集成科技有限公司</td>
+                 		<td class="index_hottr">·深圳市天音美讯信息技术有限公司</td>
+                 		<td class="index_hottr">·武汉天行健科学仪器设备有限公司</td>
+                    </tr>
+                    <tr>
+                    	<td class="index_hottr">·武汉电信系统集成分公司 </td>
+                		<td class="index_hottr">·武汉网路万通科技开发有限公司</td>
+                		<td class="index_hottr">·深圳市天音美讯信息技术有限公司</td>
+                		<td class="index_hottr">·武汉理康科技有限公司</td>
+                    </tr>
+                    <tr>
+                    	<td class="index_hottr">·武汉红帽电子娱乐有限公司 </td>
+                 		<td class="index_hottr">·武汉盛铭科技有限公司</td>
+                 		<td class="index_hottr">·武汉市一龙电气科技有限公司</td>
+                 		<td class="index_hottr">·武汉天腾通软科技有限公司</td>
+                    </tr>
+                    <tr>
+                    	<td class="index_hottr">·武汉洛比科技有限公司  </td>
+                 		<td class="index_hottr">·武汉百捷网络服务有限公司</td>
+                 		<td class="index_hottr">·江苏新科数字技术有限公武汉分公司</td>
+                 		<td class="index_hottr">·武汉市武昌区徐恒电脑服务部</td>
+                    </tr>
+                </table>
+            </div>
+            <!--贸易/消费/制造/营运--end-->
+        </div>
+        <div style="background-image:url(image/register-line.gif); width:3px; height:504px; float:left"></div>
+      </div>
+      <div style=" width:962px; height:16px;"><img src="image/hot_down.gif" /></div>
+    </div>
+    <!--最热招聘 -start--> 
+  </div>
+  <!--主题部分 -end--> 
+  <!--尾部导航 -start-->
+  <div class="menu" id="bg_menu"> 网站导航 | <a href="index.html">网站首页</a> | <a href="search.html">职位搜索</a> | <a href="login.html">Myjob</a> | <a href="register.html">用户注册</a> | <a href="login.html">用户登录</a> | <a href="intro.html">简历管理</a> | <a href="company.html" >招聘公司</a> </div>
+  <!--尾部导航 -end--> 
+  <!--尾部信息 -start-->
+  <div style="text-align:center; color:#333; width:965px; height:150px; line-height:25px; letter-spacing:1px;"> 人才招聘 Email:hr@51job.com<br />
+    个人求职 Email:club@51job.com　或垂询:800-820-5100<br />
+    未经本招聘网站同意，不得转载本网站之所有招聘信息及作品<br />
+    无忧工作网版权所有©1999-2007<br />
+    <a href="http://www.miibeian.gov.cn" target="_blank"><img src="image/bottom1.gif" border="0"/></a> </div>
+  <!--尾部信息 -end--> 
+</div>
+<!--总体结束-->
+
+<!--滚动广告 -start-->
+<div id="ad" style="position:absolute; width:109px; height:186px; top:100px;
+left:20px; background-image:url(image/close.jpg); background-repeat:no-repeat; background-color:#CCC;">
+	<div id="closeAd" style="position:relative; width:40px; height:20px; cursor:hand; top:169px; left:76px;">关闭</div>
+</div>
+<!--滚动广告 -end-->
+
+<!--跳动广告 -start-->
+<div id="float" style="position:absolute; top:0px; left:0px;width:80px; height:52px; z-index:2"><img src="image/float.gif" /></div>
+
+<!--跳动广告 -end-->
+</body>
+<script>
+var myJob = document.getElementById("myJob");
+var jobSearch = document.getElementById("jobSearch");
+var resumeMag = document.getElementById("resumeMag");
+var closeAd = document.getElementById("closeAd");
+var ad = document.getElementById("ad");
+var changePic = document.getElementById("changePic");
+var float = document.getElementById("float");
+var width = parseInt(float.style.width);
+var height = parseInt(float.style.height);
+
+var adTop = parseInt(ad.style.top);
+//浏览器窗口移动
+window.onscroll = function(){
+	var top = document.documentElement.scrollTop;
+	ad.style.top = adTop+top;
+}
+
+//水平移动的标识  0表示向右移动  1表示向左移动
+var hFlag = 0;
+//垂直移动的标识  0表示向下移动 1表示向上移动
+var vFlag = 0; 
+function move(){
+	var left = parseInt(float.style.left); 
+	var top = parseInt(float.style.top);
+	//根据水平移动的标识判断层的边距改变方式
+	if(hFlag == 0){
+		//增加层的左边距
+		float.style.left = left+1;
+	}
+	else{
+		//减少层的左边距
+		float.style.left = left-1;
+	}
+	//根据垂直移动标识判断层的高度位置
+	if(vFlag == 0){
+		float.style.top = top+1;
+	}
+	else{
+		float.style.top = top-1;	
+	}
+	//重新获取左边距
+	left = parseInt(float.style.left); 
+	//重新获取上边距
+	top = parseInt(float.style.top);
+	//判断层是否移动到屏幕的右边边缘
+	if(left >= document.documentElement.clientWidth-width){
+		//修改标识向左移动
+		hFlag = 1;
+	}
+	//如果层到达浏览器的左边缘时
+	if(left == 0){
+		//向右移动
+		hFlag = 0;	
+	}
+	//判断层是否移动到屏幕的下方边缘
+	if(top >= document.documentElement.clientHeight-height){
+		vFlag = 1;	
+	}
+	if(top == 0){
+		vFlag = 0;	
+	}
+	 window.setTimeout("move()",40);
+}
+move();
+
+//窗体大小改变事件
+window.onresize = function(){
+	//获取层的左边距
+	var left = parseInt(float.style.left);
+	var top = parseInt(float.style.top);
+	//判断层是否移动到屏幕的右边边缘
+	if(left > document.documentElement.clientWidth-width){
+		//将层调整至屏幕的右边缘
+		float.style.left = document.documentElement.clientWidth-width;
+	}
+	if(top > document.documentElement.clientHeight - height){
+		float.style.top = document.documentElement.clientHeight - height;
+	}
+}
+//关闭广告
+closeAd.onclick = function(){
+	ad.style.display = "none";	
+}
+
+//公司名称
+var td1 = document.getElementById("td1");
+var td2 = document.getElementById("td2");
+var marque1 = document.getElementById("marque1");
+td2.innerHTML = td1.innerHTML;
+var timerMar1;
+function moveMar1(){
+	//如果滚动条滚动的距离小于第一列的宽度
+	if(marque1.scrollLeft < td1.clientWidth){
+		//每次滚动1像素
+		marque1.scrollLeft++;	
+	}
+	//如果滚动条滚动到第一列的结束为止，在第二列将要呈现时，让滚动条重新还原
+	else{
+		marque1.scrollLeft = 0;	
+	}
+	timerMar1 = window.setTimeout("moveMar1()",100);
+}
+moveMar1();
+marque1.onmouseover = function(){
+	window.clearTimeout(timerMar1);	
+}
+marque1.onmouseout = function(){
+	moveMar1();	
+}
+
+//近期预告
+var mar2 = document.getElementById("mar2");
+var mar2_1 = document.getElementById("mar2_1");
+var mar2_2 = document.getElementById("mar2_2");
+mar2_2.innerHTML = mar2_1.innerHTML;
+var timerMar2;
+function moveMar2(){
+	if(mar2.scrollTop < mar2_1.clientHeight){
+		mar2.scrollTop++;	
+	}
+	else{
+		mar2.scrollTop = 0;
+	}
+	timerMar2 = window.setTimeout("moveMar2()",100);
+}
+moveMar2();
+mar2.onmouseover = function(){
+	window.clearTimeout(timerMar2);	
+}
+mar2.onmouseout = function(){
+	moveMar2();	
+}
+
+//首页广告
+var timer;
+var index = 7;
+function changePicture(){
+		index--;
+		if(index < 5){
+			index = 7;	
+		}
+		changePic.style.backgroundImage = "url(image/index-"+index+".gif)";
+		timer = window.setTimeout("changePicture()",2000);
+}
+changePicture();
+changePic.onmouseover = function(){
+	window.clearTimeout(timer);	
+}
+changePic.onmouseout = function(){
+	changePicture();
+}
+
+</script>
+<script src="javascrip.js"></script>
+</html>

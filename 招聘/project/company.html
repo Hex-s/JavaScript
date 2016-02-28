@@ -1,0 +1,521 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>招聘公司网页</title>
+</head>
+<link href="css.css" type="text/css" rel="stylesheet" />
+<script>
+//弹出flash广告窗口
+window.open("open.html","","top=120,left=0,width=300,height=250,scrollbars=0,resizable=0");
+</script>
+<body>
+<!--总体-->
+<div style="width:965px;margin:0px auto;">
+   	<!--主题部分 -start-->
+    <div style="width:740px; margin:0px auto;">
+    <!--广告title -start-->
+    <div style="height:52px;background-color:#E5E5E5;">
+    	<div style="float:left;margin-top:5px; margin-left:5px;"><img src="image/zx-banner.gif"/>
+        </div>
+          <div style="float:right; margin-top:5px; margin-right:5px;">
+            <embed src="image/zxtop.swf" width="375" height="48"></embed>
+          </div>
+    </div>		
+    <!--广告title -start-->
+    <!--导航栏 -start-->
+    <div style="width:740px;margin-top:2px; height:25px; background-color:#E5E5E5;" id="comList">
+    	<!--首页 -start-->
+    	 <div style="float:left">
+    	<div>
+        	<a href="company.html" onmouseover="openMenu('menu1')" onmouseout="closeMenu('menu1')"  style="width:172px;">首页</a>
+        </div>
+        <div id="menu1" style="display:none; position:absolute;" onmouseover="openMenu('menu1')" onmouseout="closeMenu('menu1')">
+            
+        </div>
+    </div>
+    <!--首页 -end-->
+    <!--关于中信 -start-->
+    <div style="float:left">
+    	<div>
+       	 	<a href="#" onmouseover="openMenu('menu2')" onmouseout="closeMenu('menu2')">关于中信</a>
+        </div>
+        <div id="menu2" style="display:none; position:absolute" onmouseover="openMenu('menu2')" onmouseout="closeMenu('menu2')">
+            <a name="m" href="#">集团领导</a>
+            <a name="m" href="#">领导题词</a>
+            <a name="m" href="#">业务回顾</a>
+            <a name="m" href="#">公司历史</a>
+            <a name="m" href="#">中信风格</a>
+            <a name="m" href="#">公司年报</a>
+            <a name="m" href="#">公司要闻</a>
+         </div>
+    </div>
+    <!--公司业务 -start-->
+    <div style="float:left">
+    	<div>
+       	 	<a href="#" onmouseover="openMenu('menu3')" onmouseout="closeMenu('menu3')">公司业务</a>
+        </div>
+        <div id="menu3" style="display:none; position:absolute" onmouseover="openMenu('menu3')" onmouseout="closeMenu('menu3')">
+            <a name="m" href="#">金融</a>
+            <a name="m" href="#">非金融</a>
+         </div>
+    </div>
+    <!--公司业务 -end-->
+    <!--公益事业 -start-->
+    <div style="float:left">
+    	<div>
+       	 	<a href="#" onmouseover="openMenu('menu4')" onmouseout="closeMenu('menu4')">公益事业</a>
+        </div>
+        <div id="menu4" style="display:none; position:absolute" onmouseover="openMenu('menu4')" onmouseout="closeMenu('menu4')">
+            <a name="m" href="#">扶贫</a>
+            <a name="m" href="#">绿化</a>
+            <a name="m" href="#">援藏</a>
+         </div>
+    </div>
+    <!--公益事业 -end-->
+     <!--中信研究 -start-->
+    <div style="float:left">
+    	<div>
+       	 	<a href="#" onmouseover="openMenu('menu5')" onmouseout="closeMenu('menu5')">中信研究</a>
+        </div>
+        <div id="menu5" style="display:none; position:absolute" onmouseover="openMenu('menu5')" onmouseout="closeMenu('menu5')">  
+         </div>
+    </div>
+    <!--中信研究 -end-->
+      <!--推荐招聘 -start-->
+    <div style="float:left">
+    	<div>
+       	 	<a href="#" onmouseover="openMenu('menu6')" onmouseout="closeMenu('menu6')">推荐招聘</a>
+        </div>
+        <div id="menu6" style="display:none; position:absolute" onmouseover="openMenu('menu6')" onmouseout="closeMenu('menu6')">  
+         </div>
+    </div>
+    <!--推荐招聘 -end-->
+    <!--特色推荐 -start-->
+    <div style="float:left">
+    	<div>
+       	 	<a href="#" onmouseover="openMenu('menu7')" onmouseout="closeMenu('menu7')">特色推荐</a>
+        </div>
+        <div id="menu7" style="display:none; position:absolute" onmouseover="openMenu('menu7')" onmouseout="closeMenu('menu7')">
+            <a name="m" href="#">扶贫</a>
+            <a name="m" href="#">绿化</a>
+            <a name="m" href="#">援藏</a>
+         </div>
+    </div>
+    <!--特色推荐 -end-->
+    <div style="clear:both"></div>
+    </div>
+    <!--导航栏 -start-->
+    
+    
+    <!--下方 -start-->
+   <div style="margin-top:2px;">
+         <!--左侧 -start-->
+        <div style="background-image:url(image/company-bg.gif); width:172px; background-repeat:repeat-y; float:left;">
+        	<!--登录 -start-->
+        	<div style="width:159px;; height:100px; padding-left:5px;">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <form action="#" method="post" id="comForm">
+                <tr>
+                  <td height="30">用户名：</td>
+                  <td><input id="username" type="text" size="10"></td>
+                </tr>
+                <tr>
+                  <td height="25">密&nbsp;&nbsp;&nbsp;码：</td>
+                  <td><input id="pwd" type="password" size="12"/></td>
+                </tr>
+                <tr align="center">
+                  <td height="30"><input id="btnSub" type="button" value="登 录" class="btn"></td>
+                  <td><input name="btnResS" type="reset" value="重 置" class="btn"></td>
+                </tr>
+              </form>
+            </table>
+          </div>
+          <!--登录 -end-->
+           <!--功能菜单 -start-->
+          <div>
+          	<div style="width:172px; height:47px;"><img src="image/company-left01.gif" /></div>
+            <div id="functionMenu">
+              <table width="85%" border="0" cellspacing="0" cellpadding="0" align="center">
+              <tr>
+                <td height="25">&nbsp;<img src="image/company-arrow.gif"> <a href="javascript:showHotJob();">热点招聘</a></td>
+              </tr>
+              <tr>
+                <td style="background-image:url(image/company-dot.gif); background-repeat:repeat-x;"></td>
+              </tr>
+              <tr>
+                <td height="25">&nbsp;<img src="image/company-arrow.gif"> <a href="javascript:showSearchJob();">检索职位</a></td>
+              </tr>
+              <tr>
+                <td style="background-image:url(image/company-dot.gif); background-repeat:repeat-x;"></td>
+              </tr>
+              <tr>
+                <td height="25">&nbsp;<img src="image/company-arrow.gif"> <a href="javascript:showRegister();">注册</a></td>
+              </tr>
+              <tr>
+                <td style="background-image:url(image/company-dot.gif); background-repeat:repeat-x;"></td>
+              </tr>
+              <tr>
+                <td height="25">&nbsp;<img src="image/company-arrow.gif"> <a href="javascript:showFindPwd();">找回密码</a></td>
+              </tr>
+              <tr>
+                <td style="background-image:url(image/company-dot.gif); background-repeat:repeat-x;"></td>
+              </tr>
+              <tr>
+                <td height="15"></td>
+              </tr>
+            </table>
+            </div>
+          </div>
+           <!--功能菜单 -end-->
+             <!--招聘信息 -start-->
+           <div>
+           	<div><img src="image/company-left02.gif" /></div>
+            <div>
+            	<div style="margin-left:10px; color:#414141;">请选择城市：</div>
+                <div style="margin-left:30px; margin-top:5px;">
+                	<select id="privince" style="width: 100px" onchange="cityChange()">
+                      	<option value="-1">--选择省份--</option>
+                        <option value="0">北京市</option>
+                        <option value="1">上海市</option>
+                        <option value="2">广州省</option>
+                        <option value="3">深圳市</option>
+                        <option value="4">重庆市</option>
+                        <option value="5">天津市</option>
+                        <option value="6">江苏省</option>
+                        <option value="7">浙江省</option>
+                        <option value="8">四川省</option>
+                        <option value="9">海南省</option>
+                        <option value="10">福建省</option>
+                        <option value="11">山东省</option>
+                        <option value="12">江西省</option>
+                        <option value="13">广西</option>
+                        <option value="14">安徽省</option>
+                        <option value="15">河北省</option>
+                        <option value="16">河南省</option>
+                        <option value="17">湖北省</option>
+                        <option value="18">湖南省</option>
+                        <option value="19">陕西省</option>
+                        <option value="20">山西省</option>
+                        <option value="21">黑龙江省</option>
+                        <option value="22">国外</option>
+                        <option value="23">其他</option>
+                      </select>
+                     
+                </div>
+                <div style="margin-left:30px; margin-top:5px;"> <select id="city" style="width: 100px">
+                      	 <option>--选择城市--</option>
+                      </select>  </div>
+                <div style="margin-left:50px; margin-top:10px;">
+                	<input type="submit" value="查 询" class="btn">
+                </div>
+                <div id="buttom" style=" height:80px;"></div>
+            </div>
+           </div>
+            <!--招聘信息 -end-->
+        </div>
+        <!--左侧 -end-->
+        
+        <!--右侧 -start-->
+        <div style="float:left; width:562px;margin-left:1px; text-align:center;">
+        	<!--广告 -start-->
+            <div align="center" id="rightAd" style="background-image:url(image/scroll1.jpg); width:550px; height:65px;"></div>
+        	<!--广告 -end-->
+             <!--右侧主体 -start-->
+             <!--热点招聘 -start-->
+            <div id="hotJob" style="display:block; margin-top:10px;">
+            	 <table width="554" height="430" border="0" style="color:#414141;">
+              <tr>
+                <td colspan="6" height="25" align="left"><img src="image/company-arrow.gif"> <span class="company_title">热点招聘</span></td>
+              </tr>
+              <tr>
+                <td class="company-tr1" width="25">&nbsp;</td>
+                <td width="147" class="company-tr1">职位名称</td>
+                <td width="162" class="company-tr1">公司名称</td>
+                <td width="39" class="company-tr1">人数</td>
+                <td width="77" class="company-tr1">地点</td>
+                <td width="78" class="company-tr1">发布时间</td>
+              </tr>
+              <tr>
+                <td class="company-br1">1</td>
+                <td class="company-br1"><a href="#">计划管理主管</a></td>
+                <td class="company-br1"><a href="#">中信网络有限公司</a></td>
+                <td class="company-br1">1</td>
+                <td class="company-br1">北京</td>
+                <td class="company-br1">2007-10-13</td>
+              </tr>
+              <tr>
+                <td class="company-br1">2</td>
+                <td class="company-br1"><a href="#">数字电视产品策划</a></td>
+                <td class="company-br1"><a href="#">中信网络有限公司</a></td>
+                <td class="company-br1">2</td>
+                <td class="company-br1">北京</td>
+                <td class="company-br1">2007-10-12</td>
+              </tr>
+              <tr>
+                <td class="company-br1">3</td>
+                <td class="company-br1"><a href="#">数字电视业务管理专员</a></td>
+                <td class="company-br1"><a href="#">中信网络有限公司</a></td>
+                <td class="company-br1">2</td>
+                <td class="company-br1">北京</td>
+                <td class="company-br1">2007-10-12</td>
+              </tr>
+              <tr>
+                <td class="company-br1">4</td>
+                <td class="company-br1"><a href="#">运维工程师－电源系统</a></td>
+                <td class="company-br1"><a href="#">中信网络有限公司</a></td>
+                <td class="company-br1">1</td>
+                <td class="company-br1">南京,郑州<br>
+                  北京,上海<br>
+                  广州,深圳<br>
+                  福州,武汉<br>
+                  天津,长沙<br>
+                  郑州,济南 </td>
+                <td class="company-br1">2007-10-08</td>
+              </tr>
+              <tr>
+                <td class="company-br1">5</td>
+                <td class="company-br1"><a href="#">运行维护工程师</a></td>
+                <td class="company-br1"><a href="#">中信网络有限公司</a></td>
+                <td class="company-br1">2</td>
+                <td class="company-br1">北京,上海<br>
+                  广州,深圳<br>
+                  杭州,南京<br>
+                  福州,武汉</td>
+                <td class="company-br1">2007-10-07</td>
+              </tr>
+              <tr>
+                <td class="company-br1">6</td>
+                <td class="company-br1"><a href="#">战略研究投资分析师</a></td>
+                <td class="company-br1"><a href="#">中信网络有限公司</a></td>
+                <td class="company-br1">2</td>
+                <td class="company-br1">北京</td>
+                <td class="company-br1">2007-10-07</td>
+              </tr>
+              <tr>
+                <td class="company-br1">7</td>
+                <td class="company-br1"><a href="#">预算管理主管</a></td>
+                <td class="company-br1"><a href="#">中信天津工业发展公司</a></td>
+                <td class="company-br1">1</td>
+                <td class="company-br1">天津</td>
+                <td class="company-br1">2007-10-06</td>
+              </tr>
+              <tr>
+                <td colspan="6" height="10"></td>
+              </tr>
+            </table>
+            </div>
+            
+             <!--热点招聘 -end-->
+             
+             <!-- 检索职位 -start-->
+             <div id="searchJob" style="display:none; margin-top:10px; text-align:left">
+             <table width="554" border="0" >
+              <tr>
+                <td colspan="2" height="25" align="left"><img src="image/company-arrow.gif"> <span class="company_title">添加检索器</span></td>
+              </tr>
+              <form action="" method="post" id="form-menu2">
+                <tr>
+                  <td class="company-br2">公司名称关键字</td>
+                  <td class="company-br3"><input id="company-key" type="text" class="register-input"></td>
+                </tr>
+                <tr>
+                  <td class="company-br2">职位名称关键字</td>
+                  <td class="company-br3"><input id="job-key" type="text" class="register-input"></td>
+                </tr>
+                <tr>
+                  <td class="company-br2">职位类型</td>
+                  <td class="company-br3"><input id="job-type" type="text" class="register-input"></td>
+                </tr>
+                <tr>
+                  <td class="company-br2">发布日期</td>
+                  <td class="company-br3"><input id="fdate" type="text" class="register-input"></td>
+                </tr>
+                <tr>
+                  <td class="company-br2">工作地区</td>
+                  <td class="company-br3"><input id="address" type="text" class="register-input"></td>
+                </tr>
+                <tr>
+                  <td class="company-br2">薪酬范围</td>
+                  <td class="company-br3"><input id="salary" type="text" class="register-input"></td>
+                </tr>
+                <tr>
+                  <td class="company-br2">其他关键字<br>
+                    （岗位职责、任职条件）</td>
+                  <td class="company-br3"><textarea id="con-key" cols="40" rows="6"></textarea></td>
+                </tr>
+                <tr>
+                  <td align="center" colspan="2" height="30"><input id="left-btn" type="submit" class="btn" value="搜索"></td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+              </form>
+            </table>
+             </div>
+             <!-- 检索职位 -end-->
+             
+             <!-- 注册 -start-->
+             <div id="register" style="display:none; margin-top:10px;text-align:left">
+             	 <table width="554" border="0">
+              <tr>
+                <td colspan="2" height="25" align="left"><img src="image/company-arrow.gif"> <span class="login-bold">用户注册</span></td>
+              </tr>
+              <form action="" method="post" name="form-menu3">
+                <tr>
+                  <td class="company-br2">e-mail</td>
+                  <td class="company-br3"><input name="email" type="text" class="register-input"></td>
+                  <td class="company-br2">用户名</td>
+                  <td class="company-br3"><input name="email" type="text" class="register-input"></td>
+                </tr>
+                <tr>
+                  <td class="company-br2">密码</td>
+                  <td class="company-br3"><input name="pwd" type="text" class="register-input"></td>
+                  <td class="company-br2">确认密码</td>
+                  <td class="company-br3"><input name="repeatpwd" type="text" class="register-input"></td>
+                </tr>
+                <tr>
+                  <td class="company-br2">联系方式</td>
+                  <td class="company-br3"><input name="tel" type="text" class="register-input"></td>
+                  <td class="company-br2">地址</td>
+                  <td class="company-br3"><input name="caddress" type="text" class="register-input"></td>
+                </tr>
+                <tr>
+                  <td align="center" colspan="4" height="30"><input name="left3-btn" type="submit" class="btn" value="注册"></td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+              </form>
+            </table>
+             </div>
+             <!-- 注册 -end-->
+              <!-- 找回密码 -start-->
+             <div id="findPwd" style="display:none; margin-top:10px;text-align:left">
+             	<table width="554" border="0">
+              <tr>
+                <td colspan="2" height="25" align="left"><img src="image/company-arrow.gif"> <span class="login-bold">找回密码</span></td>
+              </tr>
+              <form action="" method="post" name="form-menu4">
+                <tr>
+                  <td class="company-br2">请输入用户名</td>
+                  <td class="company-br3"><input name="r-username" type="text" class="register-input"></td>
+                </tr>
+                <tr>
+                  <td class="company-br2">请输入注册邮箱</td>
+                  <td class="company-br3"><input name="r-email" type="text" class="register-input"></td>
+                </tr>
+                <tr>
+                  <td align="center" colspan="2" height="30"><input name="left4-btn" type="submit" class="btn" value="确定"></td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+              </form>
+            </table>
+             </div>
+             <!-- 找回密码 -end-->
+              <!--右侧主体 -end-->
+        </div>
+    <!--右侧 -end-->
+   </div>
+     <!--下方 -end-->
+    </div>	
+    <!--主题部分 -end-->
+    <!--尾部导航 -start-->
+    <div class="menu" id="bg_menu">
+    	网站导航 | <a href="index.html">网站首页</a> | <a href="search.html">职位搜索</a> | <a href="login.html">Myjob</a> | <a href="register.html">用户注册</a> | <a href="login.html">用户登录</a> | <a href="intro.html">简历管理</a> | <a href="company.html" >招聘公司</a>
+    </div>
+    <!--尾部导航 -end-->
+    <!--尾部信息 -start-->
+    <div style="text-align:center; color:#333; width:965px; height:150px; line-height:25px; letter-spacing:1px;">
+    人才招聘 Email:hr@51job.com<br />个人求职 Email:club@51job.com　或垂询:800-820-5100<br /> 未经本招聘网站同意，不得转载本网站之所有招聘信息及作品<br />无忧工作网版权所有©1999-2007<br />
+ <a href="http://www.miibeian.gov.cn" target="_blank"><img src="image/bottom1.gif" border="0"/></a>
+    </div>
+    <!--尾部信息 -end--> 
+</div>    
+<!--总体结束-->
+ 
+</body>
+<script src="javascrip.js"></script>
+<script>  
+function openMenu(id){
+	var menu = document.getElementById(id);
+	menu.style.display = "block";
+}
+function closeMenu(id){
+	var menu = document.getElementById(id);
+	menu.style.display = "none";
+}
+//获取所有的子菜单
+var menus = document.getElementsByName("m");
+//遍历
+for(var i = 0; i < menus.length; i++){
+	menus[i].onmouseover = function(){
+		//alert(this.innerHTML);
+		this.style.backgroundColor = "#CC0000";
+		this.style.color = "white";
+	};
+	menus[i].onmouseout = function(){
+		this.style.backgroundColor = "#E5E5E5";
+		this.style.color = "#000";
+	};
+	
+}
+var privince = document.getElementById("privince");
+var city = document.getElementById("city");
+var rightAd = document.getElementById("rightAd");
+ 
+ var index = 1;
+ function showAd(){
+	index++;
+	if(index > 4){
+		index = 1;	
+	}	 
+	rightAd.style.backgroundImage = "url(image/scroll"+index+".jpg)";
+	window.setTimeout("showAd()",2000);
+}
+showAd();
+
+var hotJob = document.getElementById("hotJob");
+var searchJob = document.getElementById("searchJob");
+var register = document.getElementById("register");
+var findPwd = document.getElementById("findPwd");
+var buttom = document.getElementById("buttom");
+function showHotJob(){
+	hotJob.style.display = "block";
+	searchJob.style.display = "none";
+	register.style.display = "none";
+	findPwd.style.display = "none";	
+	buttom.style.height = "80px";
+}
+
+function showSearchJob(){
+	hotJob.style.display = "none";
+	searchJob.style.display = "block";
+	register.style.display = "none";
+	findPwd.style.display = "none";	
+	buttom.style.height = "10px";
+}
+function showRegister(){
+	hotJob.style.display = "none";
+	searchJob.style.display = "none";
+	register.style.display = "block";
+	findPwd.style.display = "none";	
+	buttom.style.height = "10px";
+}
+function showFindPwd(){
+	hotJob.style.display = "none";
+	searchJob.style.display = "none";
+	register.style.display = "none";
+	findPwd.style.display = "block";
+	buttom.style.height = "10px";	
+}
+
+</script>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<form name="frm">
+	<input type="text" id="txt" value="niit" />
+</form>
+<input type="text" id="txt2" value="hello" />
+<hr />
+<table border="1" width="200" height="100" cellpadding="0" cellspacing="0">
+	<tr>
+    	<td>&nbsp;</td>
+    </tr>
+    <tr>
+    	<td>&nbsp;</td>
+    </tr>
+    <tr>
+    	<td>&nbsp;</td>
+    </tr>
+    <tr>
+    	<td>&nbsp;</td>
+    </tr>
+    <tr>
+    	<td>&nbsp;</td>
+    </tr>
+</table>
+
+<hr />
+
+<input name="sex" type="radio" value="male" />男
+<input name="sex" type="radio" value="female" />女
+<br />
+<input type="button" value="确定" onclick="submitInfo()"/>
+<hr />
+请选择旅游的地点：
+<input type="checkbox" />三亚
+<input type="checkbox" />黄山
+
+</body>
+
+<script>
+//document是window的子属性，表示页面的文档，所有访问document的操作都是基于DOM实现的
+//document对象的使用
+//设置页面的
+//document.bgColor = "#8D97E9";
+//设置页面跳转的路径
+//document.URL = "http://www.sina.com.cn";
+
+//使用document获取页面中的单个对象
+//var obj;
+//方法一
+//obj = document.getElementById("txt");
+//方法二
+//obj = document.frm.txt;
+//方法三
+//obj = document.forms[0].txt;
+//方法四
+//obj = document.forms["frm"].txt;
+//方式五
+//obj = document.all.txt;
+//方式六
+//obj = document.all["txt"]
+//方式七
+//obj = txt2;
+//alert(obj.value);
+
+
+//获取页面指定标签名的标签对象数组
+//var objs = document.getElementsByTagName("input");
+//alert(objs.length);
+
+//获取所有的tr
+var rows = document.getElementsByTagName("tr");
+//循环行
+for(var i = 0; i < rows.length; i++){
+	//偶数行
+	if(i%2 == 0){
+		rows[i].bgColor = "#CCCCCC";
+	}
+	//奇数行
+	else{
+		rows[i].bgColor = "#666666";
+	}
+}
+
+
+function submitInfo(){
+	var flag = false;
+	//验证性别是否填写
+	//获取页面中相同name的标签对象
+	var rdos = document.getElementsByName("sex");
+	//遍历
+	for(var i = 0; i < rdos.length; i++){
+		//判断是否选中
+		if(rdos[i].checked){
+			flag = true;
+			alert(rdos[i].value);
+		}
+	}
+	if(!flag){
+		alert("请选择性别！");	
+	}
+}
+
+
+</script>
+</html>

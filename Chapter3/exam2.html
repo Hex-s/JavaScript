@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<style>
+#div{ width:200px; height:150px; left:50px; top:100px; background-color:#09C; position:absolute; overflow:scroll }
+</style>
+<body>
+<div id="div" ></div>
+<div></div>
+<div></div>
+<div></div>
+<script>
+//获取div对象
+var div = document.getElementById("div");
+//获取宽度
+//string类型
+//var width = div.style.width;
+//number类型,只读属性
+//clientWidth获取标签的实际宽度
+//var width = div.clientWidth;
+//offsetWidth获取标签的完整宽度（包含边框及滚动条等）
+//var width = div.offsetWidth;
+//alert(width);
+
+//获取高度
+//var height = div.style.height;
+//var height = div.clientHeight;
+//var height = div.offsetHeight;
+//alert(height);
+
+//获取边距
+//样式如果是写在样式表中需要通过currentStyle来获取
+//var left = div.currentStyle.left;
+
+
+//获取浏览器的宽高
+//var width = document.documentElement.clientWidth;
+//alert(width);
+//var height = document.documentElement.clientHeight;
+//alert(height);
+
+</script>
+</body>
+</html>

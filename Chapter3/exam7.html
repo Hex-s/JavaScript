@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<style>
+*{ font-size:13px}
+#menu div{ margin-left:20px}
+</style>
+<body>
+<div>
+	<img src="image/fclose.gif" id="img"/><a href="javascript:ExpressMenu()">论坛</a>
+</div>
+<div id="menu" style="display:none">
+	<div><img src="image/z-1.jpg" />综合讨论区</div>
+    <div><img src="image/z-2.jpg" />情感交流区</div>
+    <div><img src="image/z-3.jpg" />聊天灌水</div>
+</div>
+<script>
+function ExpressMenu(){
+	//切换图片
+	var img = document.getElementById("img");
+	var menu = document.getElementById("menu");
+	//根据菜单的状态判断是否需要展开或折叠
+	if(menu.style.display == "none"){
+		img.src = "image/fold.gif";
+		//显示菜单
+		menu.style.display = "block";
+	}
+	else{
+		img.src = "image/fclose.gif";
+		menu.style.display = "none";
+	}
+	
+}
+</script>
+</body>
+</html>

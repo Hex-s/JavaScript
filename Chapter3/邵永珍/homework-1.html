@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<style>
+.ad{
+	width:180px;
+	height:230px;
+	float:left; 
+	position:absolute;
+	top:30px;
+	background-image:url(image/advpic.gif);
+}
+.close{
+	width:13px;
+	height:13px;
+	position:relative;
+	top:217px;
+	cursor:hand;
+}
+	
+</style>
+<body>
+<!--左边广告-->
+<div class="ad" style="left:20px;" id="ad1"><img src="image/close.jpg" class="close" style="left:167px;" name="closeAd"/></div>
+<!--主页-->
+<div align="center"><img src="image/contentpic.jpg" /></div>
+<!--右边广告-->
+<div class="ad" style="right:20px;" id="ad2"><img src="image/close.jpg" class="close"  name="closeAd" /></div>
+</body>
+
+<script>
+var ad1 = document.getElementById("ad1");
+var ad2 = document.getElementById("ad2");
+var adtop1 = parseInt(ad1.style.top);
+var adtop2 = parseInt(ad2.style.top);
+window.onscroll = function(){
+	var top = document.documentElement.scrollTop;
+	ad1.style.top = adtop1 + top;
+	ad2.style.top = adtop2 + top;
+}
+
+ //获取关闭按钮
+ var closeBtn = document.getElementsByName("closeAd");
+ for(var i = 0; i < closeBtn.length; i++){
+ 	 closeBtn[i].onclick = function(){
+		ad1.style.display = "none";	 
+		ad2.style.display = "none";	 
+	 }
+ }
+
+ 
+</script>
+</html>

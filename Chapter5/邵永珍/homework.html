@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<style>
+	.span{
+		font-size:15px;
+		font-weight:bold;	
+	}
+	.div{
+		text-align:center; 
+		margin-top:20px;
+	}
+</style>
+<body>
+<div style="background-image:url(images/bg.jpg); width:666px; height:400px; margin:auto; text-align:center;">
+	<div style="font-weight:bold;font-size:24px; width:666px; height:24px;text-align:center; margin-top:20px;">魔兽世界八大种族(图)</div>
+    <div class="div"><span class="span">阵营选择</span>
+    	<select id="tribe" onchange="changeTribe()" style=" width:140px">
+        	<option value="0">--请选择你的阵营--</option>
+            <option value="1">联盟</option>
+            <option value="2">部落</option>
+        </select>
+    </div>
+    <div class="div"><span class="span">角色选择</span>
+    	<select id="race" onchange="changeRace()" style=" width:140px">
+        	<option value="0">--请选择一个种族--</option>
+        </select>
+    </div>
+    <div id="pic" class="div" style="width:250px; height:234px;"></div>
+</div>
+</body>
+<script>
+	var raceArray = new Array();
+	raceArray[0] = ["人类","暗夜精灵","矮人","侏儒"];
+	raceArray[1] = ["兽人","牛头人","亡灵","巨魔"];
+	
+	var selTribe = document.getElementById("tribe");
+	var selRace = document.getElementById("race");
+	var pic = document.getElementById("pic");
+	
+	var index;
+	function changeTribe(){
+		//根据部落选择的索引查找对应种族的数组	
+		index = selTribe.selectedIndex;
+		if(index != 0){
+			//清空种族
+			selRace.length = 0;	
+			//添加相应的种族
+			for(var i = 0; i < raceArray[index-1].length; i++){
+				var race = new Option(raceArray[index-1][i],raceArray[index-1][i]);	
+				selRace.options.add(race);
+			}
+			//显示相应图片
+			if(index == 1){
+				pic.style.backgroundImage = "url(images/humans-small.jpg)";
+			}
+			else{
+				pic.style.backgroundImage = "url(images/orcs-small.jpg)";
+			}
+		}
+	}
+	
+	function changeRace(){
+			var loc = selRace.selectedIndex;
+			if(index == 1){
+				switch(loc){
+					case 0:
+						pic.style.backgroundImage = "url(images/humans-small.jpg)";
+						break;	
+					case 1:
+						pic.style.backgroundImage = "url(images/nightelves-small.jpg)";
+						break;
+					case 2:
+						pic.style.backgroundImage = "url(images/dwarves-small.jpg)";
+						break;
+					case 3:
+						pic.style.backgroundImage = "url(images/gnomes-small.jpg)";
+						break;		
+				}
+			}
+			else if(index == 2){
+				switch(loc){
+					case 0:
+						pic.style.backgroundImage = "url(images/orcs-small.jpg)";
+						break;	
+					case 1:
+						pic.style.backgroundImage = "url(images/tauren-small.jpg)";
+						break;
+					case 2:
+						pic.style.backgroundImage = "url(images/undead-small.jpg)";
+						break;
+					case 3:
+						pic.style.backgroundImage = "url(images/trolls-small.jpg)";
+						break;		
+				}
+			}
+	}
+</script>
+</html>

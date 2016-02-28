@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<!-- onsubmit事件在表单提交时触发，该事件中调用的函数应返回boolean值，同时在调函数时必须加上return关键字用来将方法返回false时阻止表单的提交 -->
+<form action="success.html" method="post" onsubmit="return validate()">
+	userName:<input type="text" id="userName"/><br />
+    password:<input type="password" id="pwd" /><br />
+    confirmpassword:<input type="password" id="confirmPwd" /><br />
+    email:<input type="text" id="email" /><br />
+    <input type="submit" value="regist"/>
+</form>
+<script>
+function validate(){
+	//alert("表单被提交");
+	//获取表单校验的元素对象
+	var name = document.getElementById("userName");
+	var pwd = document.getElementById("pwd");
+	var confirmPwd = document.getElementById("confirmPwd");
+	var email = document.getElementById("email");
+	
+	//非空验证
+	if(name.value == ""){
+		alert("请填写用户名！");
+		//光标聚焦
+		name.focus();
+		return false;
+	}
+	if(pwd.value == ""){
+		alert("请填写密码！");
+		pwd.focus();
+		return false;	
+	}
+	if(confirmPwd.value == ""){
+		alert("请填写确认密码！");
+		confirmPwd.focus();
+		return false;	
+	}
+	//全选内容
+	//name.select();
+	
+	//用户名有效性的验证(用户名只能由数字字母下划线构成)
+	for(var i = 0; i < name.value.length; i++){
+		//获取用户名中的每个字符
+		var ch = name.value.charAt(i);
+		//如果字符既不是数字，也不是字母，同时也不是下划线则验证非法
+		if(!(ch >= '0' && ch <= '9') && !(ch >= 'a' && ch <= 'z' || ch >= 'A' && ch <= 'Z') && ch != '_')	{
+			alert("用户名输入非法！");
+			name.select();
+			return false;	
+		}
+	}
+	
+	//密码长度不能低于6位
+	if(pwd.value.length < 6){
+		alert("密码长度不能低于6位");
+		pwd.select();
+		return false;
+	}
+	
+	//确认密码和密码的验证
+	
+	//邮箱的验证
+	//必须要有.和@
+	//.和@不能在首尾
+	//@只能出现一次
+	//.只能出现在@的后面
+	//.和@不能相邻
+	//.与.不能相邻
+}
+
+</script>
+</body>
+</html>

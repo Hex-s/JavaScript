@@ -1,0 +1,36 @@
+<HTML>
+<HEAD><TITLE></TITLE>
+<SCRIPT language=javascript>
+var timer;
+function Move(){
+	document.getElementById("MovingUFO").style.pixelLeft=document.getElementById("MovingUFO").style.pixelLeft+10;
+	//alert(document.getElementById("MovingUFO").style.pixelLeft);
+	if(document.getElementById("MovingUFO").style.pixelLeft>=900){
+		document.getElementById("MovingUFO").style.pixelLeft=0;
+	}
+	timer=setTimeout("Move()",100);
+	window.status=document.getElementById("MovingUFO").style.pixelLeft;
+}
+
+function stopMove(){
+	clearTimeout(timer);
+	alert("哇塞！！！被你抓到了");
+}
+  
+</SCRIPT>
+</HEAD>
+<BODY onLoad="Move()">
+
+
+<DIV id=Nearbuilding style=" position: absolute;left: 0px; top: 100px; Z-index: 3">
+<IMG src="building.gif"></DIV>
+
+<DIV id=FarBuilding style=" position: absolute;left:350px; TOP: 60px; Z-index: 1">
+<IMG src="building.gif"></DIV>
+
+<DIV id=MovingUFO style="position: absolute;left: 0px; top: 210px; Z-index: 2">
+<IMG src="ufo.gif" WIDTH=90 HEIGHT=70  onMouseOver="stopMove()" onMouseOut="Move()"> </DIV>
+
+
+</BODY>
+</HTML>

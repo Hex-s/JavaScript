@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<a id="newsLink" href="http://www.qq.com">腾讯新闻</a>
+<hr style="margin-top:50px; margin-bottom:50px" />
+<table border="1" id="tab">
+	<tr>
+    	<td height="40"><input type="file" /></td>
+    </tr>
+    <tr>
+    	<td>
+        	<input type="button" value="新的附件" id="btnAdd"/>
+        	<input type="button" value="上传"/>
+        </td>
+    </tr>
+</table>
+<script>
+//DOM定义了整个文档模型中各个对象的属性，方法和事件，基于DOM的操作，可以对文档模型中的对象进行任意的修改
+
+//获取标签对象
+var a = document.getElementById("newsLink");
+//修改超链接的跳转路径
+a.href = "http://www.taobao.com";
+//修改超链接的文字
+a.innerHTML = "淘宝";
+
+//通过DOM访问的对象绑定事件
+document.getElementById("btnAdd").onclick = addAttchment;
+//添加附件的方法
+function addAttchment(){
+	//获取表格
+	var tab = document.getElementById("tab");
+	//新增行
+	var row = tab.insertRow(1);
+	//新增列
+	var cell = row.insertCell(0);
+	cell.height = 40;
+	//cell.innerHTML = "new cell";
+	//添加标签
+	var file = document.createElement("input");
+	//指定类型
+	file.type = "file";
+	//将标签添加至列
+	cell.appendChild(file);
+}
+
+//js中对应页面标签的和基本方法的调用都是基于window访问的，且默认为window,编写时window对象可以省略
+//window.alert();
+//window.document.getElementById("");
+</script>
+</body>
+</html>
